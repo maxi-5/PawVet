@@ -1,6 +1,6 @@
 # Flujo de trabajo con Git
 
-- **Repositorio:** monorepo en GitHub con `/docs`, `/api-clinica`, `/api-agenda`, `/cliente-react` (Hito 1).
+- **Repositorio:** https://github.com/maxi-5/PawVet — monorepo en GitHub con `/docs`, `/api-clinica`, `/api-agenda`, `/cliente-react` (Hito 1).
 - **Rama principal:** `main`, protegida: solo se integra por pull request con una aprobación.
 - **Ramas:** `feature/<id>-<descripcion>` (ej. `feature/B-07-citas-estados`), `fix/<descripcion>`, `docs/<descripcion>`.
 - **Commits:** en español e imperativo, con el ID del ítem: `B-07: agrega PATCH /citas/{id}/estado`.

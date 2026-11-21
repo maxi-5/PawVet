@@ -5,6 +5,8 @@ Sistema de gestión para una clínica veterinaria: tutores, mascotas, agenda de 
 Equipo: **Maximiliano Cuevas** (Product Owner) y **Vicente Bravo** (Scrum Master). Docente: Enso Guidotti.
 Diseño: `docs/hitos/Hito1-Caso-y-requerimientos.docx` y `docs/hitos/Hito2-Diseno.docx`.
 
+Repositorio: https://github.com/maxi-5/PawVet · Tablero: https://github.com/users/maxi-5/projects/1
+
 ## Arquitectura
 
 | Componente | Puerto | Responsabilidad | Base de datos |
