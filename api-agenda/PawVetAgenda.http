@@ -1,0 +1,51 @@
+### PawVet - API Agenda y Atencion (Visual Studio: boton "Send request")
+@url = http://localhost:5002/api/v1
+# el token se obtiene en la API Clinica: POST http://localhost:5001/api/v1/auth/login
+@token = PEGA_AQUI_EL_TOKEN
+
+### Agendar cita (Administrador o Recepcionista)
+POST {{url}}/citas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "idMascota": 1, "idVeterinario": 1, "fechaHora": "2026-12-02T10:00:00", "duracionMinutos": 30, "motivo": "Control anual" }
+
+### Agendar en feriado (debe responder 400)
+POST {{url}}/citas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "idMascota": 1, "idVeterinario": 1, "fechaHora": "2026-12-25T10:00:00", "duracionMinutos": 30, "motivo": "Control" }
+
+### Citas filtradas
+GET {{url}}/citas?fecha=2026-12-02&estado=Agendada
+Authorization: Bearer {{token}}
+
+### Confirmar cita
+PATCH {{url}}/citas/1/estado
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "estado": "Confirmada" }
+
+### Mi agenda (token de un Veterinario)
+GET {{url}}/citas/mi-agenda?fecha=2026-12-02
+Authorization: Bearer {{token}}
+
+### Registrar atencion (token del Veterinario de la cita)
+POST {{url}}/atenciones
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "idCita": 1, "diagnostico": "Paciente sano", "tratamiento": "Desparasitación", "peso": 25.4, "temperatura": 38.5 }
+
+### Registrar vacunacion
+POST {{url}}/vacunaciones
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "idMascota": 1, "idVacuna": 1, "fechaAplicacion": "2026-11-16", "lote": "L-2026-01", "idAtencion": 1 }
+
+### Vacunas por vencer
+GET {{url}}/vacunaciones/por-vencer?dias=30
+Authorization: Bearer {{token}}
