@@ -1,0 +1,187 @@
+/* ============================================================
+   PawVet — estilos del cliente React
+   Diseño simple: menú lateral, tarjetas blancas, un color de acento.
+   ============================================================ */
+:root {
+  --verde: #0b6e4f;
+  --verde-claro: #e6f2ed;
+  --verde-hover: #095c42;
+  --texto: #1f2933;
+  --texto-suave: #616e7c;
+  --borde: #e4e7eb;
+  --fondo: #f5f7f6;
+  --blanco: #ffffff;
+  --rojo: #c0392b;
+  --rojo-claro: #fdecea;
+  --radio: 10px;
+  --sombra: 0 1px 3px rgba(16, 24, 40, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 15px;
+  color: var(--texto);
+  background: var(--fondo);
+}
+h2 { margin: 0; font-size: 22px; }
+h3 { margin: 18px 0 10px; font-size: 17px; }
+a { color: var(--verde); }
+
+/* ---------- estructura: menú lateral + contenido ---------- */
+.app { display: flex; min-height: 100vh; }
+.lateral {
+  width: 250px; flex-shrink: 0;
+  background: var(--blanco); border-right: 1px solid var(--borde);
+  display: flex; flex-direction: column; padding: 18px 12px;
+  position: sticky; top: 0; height: 100vh; overflow-y: auto;
+}
+.marca { font-size: 22px; font-weight: 700; color: var(--verde); padding: 0 10px 4px; }
+.marca-sub { font-size: 12px; color: var(--texto-suave); padding: 0 10px 18px; }
+.menu { display: flex; flex-direction: column; gap: 2px; }
+.menu a {
+  display: block; padding: 9px 10px; border-radius: 8px;
+  text-decoration: none; color: var(--texto);
+}
+.menu a small { display: block; font-size: 12px; color: var(--texto-suave); margin-top: 2px; }
+.menu a:hover { background: var(--fondo); }
+.menu a.active { background: var(--verde-claro); color: var(--verde); font-weight: 600; }
+.menu-titulo { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--texto-suave); margin: 14px 10px 4px; }
+.sesion { margin-top: auto; border-top: 1px solid var(--borde); padding: 14px 10px 0; font-size: 14px; }
+.sesion .rol { display: inline-block; margin: 4px 0 10px; font-size: 12px; background: var(--verde-claro); color: var(--verde); padding: 2px 8px; border-radius: 99px; }
+.sesion button { width: 100%; }
+
+.contenido { flex: 1; padding: 28px 32px; max-width: 1150px; }
+
+/* ---------- encabezado de cada página ---------- */
+.encabezado { margin-bottom: 18px; }
+.encabezado p { margin: 4px 0 0; color: var(--texto-suave); }
+.ayuda-botones {
+  margin-top: 12px; background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: 10px 14px; font-size: 14px;
+}
+.ayuda-botones summary { cursor: pointer; color: var(--verde); font-weight: 600; }
+.ayuda-botones dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 10px 0 2px; }
+.ayuda-botones dt { font-weight: 600; }
+.ayuda-botones dd { margin: 0; color: var(--texto-suave); }
+
+/* ---------- botones ---------- */
+button, .boton {
+  display: inline-block; font: inherit; font-size: 14px; cursor: pointer;
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--verde);
+  background: var(--verde); color: #fff; text-decoration: none; line-height: 1.2;
+}
+button:hover, .boton:hover { background: var(--verde-hover); }
+button:disabled { opacity: .55; cursor: wait; }
+button.secundario, .boton.secundario { background: var(--blanco); color: var(--texto); border-color: var(--borde); }
+button.secundario:hover, .boton.secundario:hover { background: var(--fondo); }
+button.peligro { background: var(--blanco); color: var(--rojo); border-color: #f1c0ba; }
+button.peligro:hover { background: var(--rojo-claro); }
+/* acciones dentro de las tablas: botones pequeños */
+td.acciones { white-space: nowrap; }
+td.acciones button, td.acciones a { padding: 5px 10px; font-size: 13px; margin-right: 4px; }
+td.acciones a:not(.boton) { display: inline-block; border: 1px solid var(--borde); border-radius: 8px; text-decoration: none; color: var(--texto); background: var(--blanco); }
+td.acciones a:not(.boton):hover { background: var(--fondo); }
+td.acciones button:not(.peligro):not(.boton) { background: var(--blanco); color: var(--verde); border-color: var(--borde); }
+td.acciones button:not(.peligro):hover { background: var(--verde-claro); }
+
+/* ---------- barra de filtros y búsqueda ---------- */
+.filtros {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: 10px; margin-bottom: 14px;
+}
+.filtros .espacio { flex: 1; }
+.filtros label { display: flex; align-items: center; gap: 6px; }
+
+/* ---------- campos ---------- */
+input, select, textarea {
+  font: inherit; font-size: 14px; padding: 8px 10px; border: 1px solid #cbd2d9;
+  border-radius: 8px; background: #fff; color: var(--texto); min-width: 0;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--verde-claro); border-color: var(--verde); }
+textarea { min-height: 70px; resize: vertical; }
+
+/* ---------- formularios ---------- */
+.formulario {
+  background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio);
+  box-shadow: var(--sombra); padding: 20px; margin-bottom: 16px; max-width: 640px;
+  display: grid; gap: 12px;
+}
+.formulario h2, .formulario h3 { margin: 0 0 4px; }
+.formulario label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-suave); }
+.formulario p { margin: 0; color: var(--texto-suave); }
+div.acciones { display: flex; gap: 8px; align-items: center; }
+.ayuda { margin: 0; font-size: 13px; color: var(--texto-suave); }
+
+/* ---------- tablas ---------- */
+table {
+  width: 100%; border-collapse: collapse; background: var(--blanco);
+  border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra);
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borde); vertical-align: middle; }
+th { background: #fafbfa; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--texto-suave); }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: #fafcfb; }
+
+.paginacion { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 14px 0; color: var(--texto-suave); font-size: 14px; }
+
+/* ---------- mensajes ---------- */
+.mensaje { padding: 10px 14px; border-radius: 8px; margin: 10px 0; font-size: 14px; }
+.mensaje.error { background: var(--rojo-claro); color: var(--rojo); }
+.mensaje.exito { background: var(--verde-claro); color: var(--verde); }
+.cargando { color: var(--texto-suave); padding: 20px 0; }
+.vacio { background: var(--blanco); border: 1px dashed var(--borde); border-radius: var(--radio); padding: 24px; text-align: center; color: var(--texto-suave); }
+
+/* ---------- estado de la cita ---------- */
+.estado { display: inline-block; padding: 3px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; }
+.estado-agendada { background: #fff3cd; color: #8a6100; }
+.estado-confirmada { background: #dbeafe; color: #1e4fa3; }
+.estado-atendida { background: var(--verde-claro); color: var(--verde); }
+.estado-cancelada { background: #eceff1; color: #52606d; }
+.estado-noasistio { background: var(--rojo-claro); color: var(--rojo); }
+
+/* ---------- inicio: tarjetas de acceso rápido ---------- */
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; }
+.tarjeta {
+  display: block; background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: 18px; text-decoration: none; color: var(--texto); box-shadow: var(--sombra);
+  transition: border-color .15s, transform .15s;
+}
+.tarjeta:hover { border-color: var(--verde); transform: translateY(-2px); }
+.tarjeta strong { display: block; color: var(--verde); font-size: 16px; margin-bottom: 6px; }
+.tarjeta span { color: var(--texto-suave); font-size: 14px; }
+
+/* ---------- catálogos ---------- */
+.dos-columnas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.dos-columnas section { background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio); padding: 4px 16px 16px; }
+.en-linea { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.en-linea input { flex: 1; }
+.lista { list-style: none; margin: 0; padding: 0; }
+.lista li { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--borde); }
+.lista li:last-child { border-bottom: none; }
+.lista li small { color: var(--texto-suave); flex: 1; }
+.lista li button { padding: 4px 10px; font-size: 13px; }
+
+/* ---------- login ---------- */
+.login-fondo { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+.login {
+  width: 100%; max-width: 380px; background: var(--blanco); border: 1px solid var(--borde);
+  border-radius: 14px; box-shadow: 0 8px 24px rgba(16, 24, 40, .08); padding: 32px;
+}
+.login h1 { margin: 0; color: var(--verde); font-size: 30px; }
+.login > p { margin: 4px 0 20px; color: var(--texto-suave); }
+.login form { display: grid; gap: 14px; }
+.login label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-suave); }
+.login button { width: 100%; padding: 10px; font-size: 15px; }
+.login .pie { margin-top: 16px; font-size: 12px; color: var(--texto-suave); text-align: center; }
+
+/* ---------- pantallas pequeñas ---------- */
+@media (max-width: 800px) {
+  .app { flex-direction: column; }
+  .lateral { width: 100%; height: auto; position: static; }
+  .menu a small { display: none; }
+  .contenido { padding: 18px; }
+  table { display: block; overflow-x: auto; }
+}
