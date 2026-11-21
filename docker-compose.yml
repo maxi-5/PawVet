@@ -1,0 +1,63 @@
+# PawVet - sistema completo con un solo comando:
+#   1) copiar .env.example a .env y completar los valores
+#   2) docker compose up --build
+# Cliente: http://localhost:3000 | API Clinica: http://localhost:5001/swagger | API Agenda: http://localhost:5002/swagger
+# Diagrama: docs/diagramas/despliegue.mmd (Hito 2, seccion 6)
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: pawvet-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+  api-clinica:
+    build: ./api-clinica
+    container_name: pawvet-api-clinica
+    depends_on:
+      - sqlserver
+    environment:
+      ConnectionStrings__ClinicaDB: "Server=sqlserver,1433;Database=PawVetClinicaDB;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;"
+      Jwt__Key: ${Jwt__Key}
+      Admin__Email: ${Admin__Email:-admin@pawvet.cl}
+      Admin__Password: ${Admin__Password}
+      Cors__Origenes: "http://localhost:3000,http://localhost:5173"
+    ports:
+      - "5001:8080"
+
+  api-agenda:
+    build: ./api-agenda
+    container_name: pawvet-api-agenda
+    depends_on:
+      - sqlserver
+      - api-clinica
+    environment:
+      ConnectionStrings__AgendaDB: "Server=sqlserver,1433;Database=PawVetAgendaDB;User Id=sa;Password=${MSSQL_SA_PASSWORD};TrustServerCertificate=True;"
+      Jwt__Key: ${Jwt__Key}
+      # dentro de la red de Docker la API Clinica se llama por el nombre del servicio
+      Servicios__ApiClinica: "http://api-clinica:8080/"
+      Cors__Origenes: "http://localhost:3000,http://localhost:5173"
+    ports:
+      - "5002:8080"
+
+  cliente-react:
+    build:
+      context: ./cliente-react
+      args:
+        # el navegador llama a las APIs por los puertos publicados en el host
+        VITE_API_CLINICA: "http://localhost:5001/api/v1"
+        VITE_API_AGENDA: "http://localhost:5002/api/v1"
+    container_name: pawvet-cliente
+    depends_on:
+      - api-clinica
+      - api-agenda
+    ports:
+      - "3000:80"
+
+volumes:
+  sqldata:

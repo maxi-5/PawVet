@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="40b20b5c-9d8d-4119-8027-abd93a112a34" name="maxim@LAPTOP-VV4ACHME 2026-11-21 18:22:12" runUser="LAPTOP-VV4ACHME\maxim" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-21T18:22:12.1375119-03:00" queuing="2026-11-21T18:22:12.1375124-03:00" start="2026-11-21T18:22:08.6150013-03:00" finish="2026-11-21T18:22:16.3191644-03:00" />
+  <TestSettings name="default" id="3d8bf964-9783-4e2f-b98a-5cf8d3025612">
+    <Deployment runDeploymentRoot="maxim_LAPTOP-VV4ACHME_2026-11-21_18_22_12" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="6a8274c7-7b8f-46ec-aa40-6f75fdc76dd8" testId="fe94beb8-740d-d22c-af19-16157c2cc440" testName="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConCredencialesCorrectas_DevuelveTokenConRol" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1183786" startTime="2026-11-21T18:22:13.4317715-03:00" endTime="2026-11-21T18:22:13.5502539-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a8274c7-7b8f-46ec-aa40-6f75fdc76dd8" />
+    <UnitTestResult executionId="2652e968-4639-408b-aecc-febca22363fa" testId="b12d8a46-ad52-d70b-11e1-46d69988d629" testName="PawVetClinica.Tests.CatalogosTests.DeleteEspecie_ConRazas_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1940789" startTime="2026-11-21T18:22:11.5050126-03:00" endTime="2026-11-21T18:22:11.6849646-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2652e968-4639-408b-aecc-febca22363fa" />
+    <UnitTestResult executionId="97cca793-674a-4db4-95e1-77e8ba414fdd" testId="e1dbc72b-5e4d-aed8-e140-b6a9cf831918" testName="PawVetClinica.Tests.AuthYUsuariosTests.GetUsuarios_SinToken_Devuelve401" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0089846" startTime="2026-11-21T18:22:12.1142096-03:00" endTime="2026-11-21T18:22:12.1185154-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97cca793-674a-4db4-95e1-77e8ba414fdd" />
+    <UnitTestResult executionId="9cbcea24-8f99-4713-b99b-16078bc7b1d8" testId="879c8445-b67f-eeaa-0e8f-73ba77448b45" testName="PawVetClinica.Tests.CatalogosTests.PostRaza_ConEspecieInexistente_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:01.9941753" startTime="2026-11-21T18:22:09.4837556-03:00" endTime="2026-11-21T18:22:11.4880186-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9cbcea24-8f99-4713-b99b-16078bc7b1d8" />
+    <UnitTestResult executionId="9048313b-d489-4e24-9458-7e08c9dfb03f" testId="60b91b14-888c-b6e2-601e-ed57cd86eb35" testName="PawVetClinica.Tests.TutoresYMascotasTests.DeleteTutor_ConMascotas_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.2421953" startTime="2026-11-21T18:22:12.3025066-03:00" endTime="2026-11-21T18:22:12.5449134-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9048313b-d489-4e24-9458-7e08c9dfb03f" />
+    <UnitTestResult executionId="4b11c4d1-2c71-48b0-9496-b8ce5edcf066" testId="5a72a268-462e-b22c-23a7-e4777bb52081" testName="PawVetClinica.Tests.TutoresYMascotasTests.DeleteTutor_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3516262" startTime="2026-11-21T18:22:14.7498807-03:00" endTime="2026-11-21T18:22:15.1019298-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b11c4d1-2c71-48b0-9496-b8ce5edcf066" />
+    <UnitTestResult executionId="74a26a2e-d7a1-472e-8bfe-550cec00e144" testId="3eeb6476-804f-1882-7a39-31cf9c9bede7" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConRazaDeOtraEspecie_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:02.4137737" startTime="2026-11-21T18:22:09.4837928-03:00" endTime="2026-11-21T18:22:11.9026870-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74a26a2e-d7a1-472e-8bfe-550cec00e144" />
+    <UnitTestResult executionId="96630f44-ea3d-4d1e-851a-693626e3c8d6" testId="d0dbbdc2-b2ad-1fe5-1a7e-c98a3b942be9" testName="PawVetClinica.Tests.AuthYUsuariosTests.DeleteUsuario_Existente_Devuelve204YLuego404" computerName="LAPTOP-VV4ACHME" duration="00:00:00.4371949" startTime="2026-11-21T18:22:11.6719409-03:00" endTime="2026-11-21T18:22:12.1089679-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96630f44-ea3d-4d1e-851a-693626e3c8d6" />
+    <UnitTestResult executionId="b31973f9-d894-4654-a52c-aca091c27629" testId="58eff422-2555-5173-e872-a6aef2921993" testName="PawVetClinica.Tests.CatalogosTests.PostVeterinario_VinculadoAUsuarioQueNoEsVeterinario_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3974685" startTime="2026-11-21T18:22:12.2897141-03:00" endTime="2026-11-21T18:22:12.6874116-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b31973f9-d894-4654-a52c-aca091c27629" />
+    <UnitTestResult executionId="f29768b6-9054-4e0f-9e83-2e53debdedc7" testId="f6e1930e-b195-ede2-e0be-731c1e0f7fa7" testName="PawVetClinica.Tests.AuthYUsuariosTests.Login_DeVeterinarioVinculado_IncluyeIdVeterinarioEnElToken" computerName="LAPTOP-VV4ACHME" duration="00:00:00.5254091" startTime="2026-11-21T18:22:12.5069899-03:00" endTime="2026-11-21T18:22:13.0325956-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f29768b6-9054-4e0f-9e83-2e53debdedc7" />
+    <UnitTestResult executionId="60b61dfe-843f-47d7-98f2-694b12347545" testId="0742dc3b-c7c4-048e-ac31-e4814b747afe" testName="PawVetClinica.Tests.CatalogosTests.PostEspecie_Repetida_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1541167" startTime="2026-11-21T18:22:13.0581877-03:00" endTime="2026-11-21T18:22:13.2126486-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60b61dfe-843f-47d7-98f2-694b12347545" />
+    <UnitTestResult executionId="c03d6ad3-a0ce-47cd-b9e2-bc36c4ee71ab" testId="bfeed18e-0f7d-124b-44a0-53b14152cf26" testName="PawVetClinica.Tests.CatalogosTests.GetVeterinarios_ComoRecepcionista_Devuelve200" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3700305" startTime="2026-11-21T18:22:12.6876308-03:00" endTime="2026-11-21T18:22:13.0579480-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c03d6ad3-a0ce-47cd-b9e2-bc36c4ee71ab" />
+    <UnitTestResult executionId="72062bc9-0baf-4036-9100-e217ea6235fa" testId="3347b92d-d065-2c65-8db6-8464564cc0b9" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConTutorInexistente_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3548350" startTime="2026-11-21T18:22:13.3194211-03:00" endTime="2026-11-21T18:22:13.6732186-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72062bc9-0baf-4036-9100-e217ea6235fa" />
+    <UnitTestResult executionId="16ed0877-27dd-4872-a21b-002890638cec" testId="468692ec-9a28-80e4-5945-98b8e0656c1f" testName="PawVetClinica.Tests.CatalogosTests.GetRazas_PorEspecie_SoloTraeEsaEspecie" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1714405" startTime="2026-11-21T18:22:12.1179573-03:00" endTime="2026-11-21T18:22:12.2894624-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16ed0877-27dd-4872-a21b-002890638cec" />
+    <UnitTestResult executionId="c220821d-8137-4b5b-a4bc-b58db019d152" testId="ee7da5da-c3c7-5bdf-96a3-b90d3390084d" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ComoRecepcionista_Devuelve201" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3644650" startTime="2026-11-21T18:22:12.5477271-03:00" endTime="2026-11-21T18:22:12.9098183-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c220821d-8137-4b5b-a4bc-b58db019d152" />
+    <UnitTestResult executionId="9b2d73e5-7bf3-4631-9728-adc39aa8f7ac" testId="6cf7c33f-b882-5898-1a12-e88ab5fb83c0" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_Valida_Devuelve201ConEdadYNombres" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3466636" startTime="2026-11-21T18:22:15.1021993-03:00" endTime="2026-11-21T18:22:15.4490299-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b2d73e5-7bf3-4631-9728-adc39aa8f7ac" />
+    <UnitTestResult executionId="ff43f8ed-6650-4470-961d-d50d73d8a46d" testId="2ed73629-5261-a4b0-94ab-7dcb086975a2" testName="PawVetClinica.Tests.CatalogosTests.PostVeterinario_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.4315597" startTime="2026-11-21T18:22:11.6853644-03:00" endTime="2026-11-21T18:22:12.1174243-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff43f8ed-6650-4470-961d-d50d73d8a46d" />
+    <UnitTestResult executionId="8c276040-9160-4402-a8d3-074ffc7d7aa4" testId="a2fd1340-cd4f-68c2-972c-41b8ec1609a7" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConMicrochipRepetido_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.4071332" startTime="2026-11-21T18:22:12.9100704-03:00" endTime="2026-11-21T18:22:13.3179374-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c276040-9160-4402-a8d3-074ffc7d7aa4" />
+    <UnitTestResult executionId="e4c112c6-f6c3-44a6-8627-a6e2c4374371" testId="d4779f1d-6bcc-688d-780a-f931f4ecddc3" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ComoVeterinario_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3987671" startTime="2026-11-21T18:22:11.9030587-03:00" endTime="2026-11-21T18:22:12.3021811-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4c112c6-f6c3-44a6-8627-a6e2c4374371" />
+    <UnitTestResult executionId="e06a5db4-26d5-4231-b8cb-93947da6f373" testId="edc85b58-4a63-2a4c-2597-a4d054d91829" testName="PawVetClinica.Tests.CatalogosTests.PostVeterinario_ConRutRepetido_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1429493" startTime="2026-11-21T18:22:13.2129531-03:00" endTime="2026-11-21T18:22:13.3561651-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e06a5db4-26d5-4231-b8cb-93947da6f373" />
+    <UnitTestResult executionId="00907edf-2ba6-419f-be6e-03f9728ef64e" testId="4e6772b9-8a29-e29a-3845-b6daad9c9bc6" testName="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConPasswordIncorrecta_Devuelve401" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1270917" startTime="2026-11-21T18:22:13.3042582-03:00" endTime="2026-11-21T18:22:13.4314469-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00907edf-2ba6-419f-be6e-03f9728ef64e" />
+    <UnitTestResult executionId="7e353731-b7eb-45be-af75-c7e3166e3d00" testId="c3b08c9c-ac3d-3dfd-d72e-ecedffa525f5" testName="PawVetClinica.Tests.AuthYUsuariosTests.GetUsuarios_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3874117" startTime="2026-11-21T18:22:12.1187882-03:00" endTime="2026-11-21T18:22:12.5066763-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e353731-b7eb-45be-af75-c7e3166e3d00" />
+    <UnitTestResult executionId="f2cb6221-289c-4b31-8008-fbacf68cbe04" testId="d349e698-b5a2-bfae-dbda-183deacda725" testName="PawVetClinica.Tests.AuthYUsuariosTests.DeleteUsuario_ElPropioAdministrador_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:01.9940818" startTime="2026-11-21T18:22:09.4820910-03:00" endTime="2026-11-21T18:22:11.4935146-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2cb6221-289c-4b31-8008-fbacf68cbe04" />
+    <UnitTestResult executionId="13ef89f5-d15a-40af-baf5-fe5c55f862b6" testId="0d8e2f77-8ae6-fd86-b17a-4d5b6281deec" testName="PawVetClinica.Tests.AuthYUsuariosTests.PostUsuario_ConRolInexistente_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.1801810" startTime="2026-11-21T18:22:11.5050500-03:00" endTime="2026-11-21T18:22:11.6711962-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13ef89f5-d15a-40af-baf5-fe5c55f862b6" />
+    <UnitTestResult executionId="76d29df5-93ca-4505-b8b2-5844e10e2283" testId="88b10b95-e0b2-88ff-f067-130b3aea623c" testName="PawVetClinica.Tests.TutoresYMascotasTests.PutTutor_CambiaLosDatos_Devuelve204" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3774283" startTime="2026-11-21T18:22:13.6734208-03:00" endTime="2026-11-21T18:22:14.0511086-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76d29df5-93ca-4505-b8b2-5844e10e2283" />
+    <UnitTestResult executionId="d4980892-bc8c-4fb5-ba34-e4de2c8a7c02" testId="e176cec6-3caf-0589-06ec-17c2c2ccd8f3" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConMicrochipDe10Digitos_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3525801" startTime="2026-11-21T18:22:14.3969227-03:00" endTime="2026-11-21T18:22:14.7496827-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4980892-bc8c-4fb5-ba34-e4de2c8a7c02" />
+    <UnitTestResult executionId="a13cba37-04f1-4853-b5dc-2a1b56db66ea" testId="01f964e2-ee3d-5cc7-2fbb-9748194bfb44" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ConRutInvalido_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3449828" startTime="2026-11-21T18:22:14.0513944-03:00" endTime="2026-11-21T18:22:14.3966959-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a13cba37-04f1-4853-b5dc-2a1b56db66ea" />
+    <UnitTestResult executionId="b74e8060-ff42-47c8-843b-a9e1ec57dc5c" testId="3540d1f8-fc4d-9213-93e6-319b0902816e" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ConRutRepetido_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3458008" startTime="2026-11-21T18:22:15.7952044-03:00" endTime="2026-11-21T18:22:16.1415265-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b74e8060-ff42-47c8-843b-a9e1ec57dc5c" />
+    <UnitTestResult executionId="3d8a95a2-7c86-44f3-a463-64de3b00f4b7" testId="61c4a26f-3d91-0be1-d0cf-ee12aaf1fc6e" testName="PawVetClinica.Tests.AuthYUsuariosTests.PostUsuario_ConEmailRepetido_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.2705958" startTime="2026-11-21T18:22:13.0328724-03:00" endTime="2026-11-21T18:22:13.3038746-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d8a95a2-7c86-44f3-a463-64de3b00f4b7" />
+    <UnitTestResult executionId="d7ee635a-2b15-4048-b4ec-f0baca340d0c" testId="cfa10ec5-8198-7f08-ebb0-17cdb651b57e" testName="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConEmailSinFormato_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0080783" startTime="2026-11-21T18:22:13.5505269-03:00" endTime="2026-11-21T18:22:13.5587893-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7ee635a-2b15-4048-b4ec-f0baca340d0c" />
+    <UnitTestResult executionId="722baf89-d09f-42b3-9a8c-b66b7700de36" testId="481db82c-dc0d-2c87-24d2-cf2607bdfbea" testName="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConFechaDeNacimientoFutura_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.3455575" startTime="2026-11-21T18:22:15.4492112-03:00" endTime="2026-11-21T18:22:15.7950291-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="722baf89-d09f-42b3-9a8c-b66b7700de36" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.PostVeterinario_ConRutRepetido_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="edc85b58-4a63-2a4c-2597-a4d054d91829">
+      <Execution id="e06a5db4-26d5-4231-b8cb-93947da6f373" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="PostVeterinario_ConRutRepetido_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.PostUsuario_ConRolInexistente_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="0d8e2f77-8ae6-fd86-b17a-4d5b6281deec">
+      <Execution id="13ef89f5-d15a-40af-baf5-fe5c55f862b6" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="PostUsuario_ConRolInexistente_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.PostVeterinario_VinculadoAUsuarioQueNoEsVeterinario_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="58eff422-2555-5173-e872-a6aef2921993">
+      <Execution id="b31973f9-d894-4654-a52c-aca091c27629" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="PostVeterinario_VinculadoAUsuarioQueNoEsVeterinario_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ComoVeterinario_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="d4779f1d-6bcc-688d-780a-f931f4ecddc3">
+      <Execution id="e4c112c6-f6c3-44a6-8627-a6e2c4374371" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostTutor_ComoVeterinario_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PutTutor_CambiaLosDatos_Devuelve204" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="88b10b95-e0b2-88ff-f067-130b3aea623c">
+      <Execution id="76d29df5-93ca-4505-b8b2-5844e10e2283" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PutTutor_CambiaLosDatos_Devuelve204" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConCredencialesCorrectas_DevuelveTokenConRol" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="fe94beb8-740d-d22c-af19-16157c2cc440">
+      <Execution id="6a8274c7-7b8f-46ec-aa40-6f75fdc76dd8" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="Login_ConCredencialesCorrectas_DevuelveTokenConRol" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.GetUsuarios_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="c3b08c9c-ac3d-3dfd-d72e-ecedffa525f5">
+      <Execution id="7e353731-b7eb-45be-af75-c7e3166e3d00" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="GetUsuarios_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_Valida_Devuelve201ConEdadYNombres" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="6cf7c33f-b882-5898-1a12-e88ab5fb83c0">
+      <Execution id="9b2d73e5-7bf3-4631-9728-adc39aa8f7ac" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_Valida_Devuelve201ConEdadYNombres" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.PostUsuario_ConEmailRepetido_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="61c4a26f-3d91-0be1-d0cf-ee12aaf1fc6e">
+      <Execution id="3d8a95a2-7c86-44f3-a463-64de3b00f4b7" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="PostUsuario_ConEmailRepetido_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ComoRecepcionista_Devuelve201" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="ee7da5da-c3c7-5bdf-96a3-b90d3390084d">
+      <Execution id="c220821d-8137-4b5b-a4bc-b58db019d152" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostTutor_ComoRecepcionista_Devuelve201" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.DeleteUsuario_Existente_Devuelve204YLuego404" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="d0dbbdc2-b2ad-1fe5-1a7e-c98a3b942be9">
+      <Execution id="96630f44-ea3d-4d1e-851a-693626e3c8d6" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="DeleteUsuario_Existente_Devuelve204YLuego404" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.GetVeterinarios_ComoRecepcionista_Devuelve200" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="bfeed18e-0f7d-124b-44a0-53b14152cf26">
+      <Execution id="c03d6ad3-a0ce-47cd-b9e2-bc36c4ee71ab" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="GetVeterinarios_ComoRecepcionista_Devuelve200" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.DeleteEspecie_ConRazas_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="b12d8a46-ad52-d70b-11e1-46d69988d629">
+      <Execution id="2652e968-4639-408b-aecc-febca22363fa" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="DeleteEspecie_ConRazas_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConMicrochipRepetido_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="a2fd1340-cd4f-68c2-972c-41b8ec1609a7">
+      <Execution id="8c276040-9160-4402-a8d3-074ffc7d7aa4" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_ConMicrochipRepetido_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConEmailSinFormato_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="cfa10ec5-8198-7f08-ebb0-17cdb651b57e">
+      <Execution id="d7ee635a-2b15-4048-b4ec-f0baca340d0c" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="Login_ConEmailSinFormato_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.Login_DeVeterinarioVinculado_IncluyeIdVeterinarioEnElToken" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="f6e1930e-b195-ede2-e0be-731c1e0f7fa7">
+      <Execution id="f29768b6-9054-4e0f-9e83-2e53debdedc7" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="Login_DeVeterinarioVinculado_IncluyeIdVeterinarioEnElToken" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConRazaDeOtraEspecie_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="3eeb6476-804f-1882-7a39-31cf9c9bede7">
+      <Execution id="74a26a2e-d7a1-472e-8bfe-550cec00e144" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_ConRazaDeOtraEspecie_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.DeleteUsuario_ElPropioAdministrador_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="d349e698-b5a2-bfae-dbda-183deacda725">
+      <Execution id="f2cb6221-289c-4b31-8008-fbacf68cbe04" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="DeleteUsuario_ElPropioAdministrador_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.DeleteTutor_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="5a72a268-462e-b22c-23a7-e4777bb52081">
+      <Execution id="4b11c4d1-2c71-48b0-9496-b8ce5edcf066" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="DeleteTutor_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ConRutInvalido_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="01f964e2-ee3d-5cc7-2fbb-9748194bfb44">
+      <Execution id="a13cba37-04f1-4853-b5dc-2a1b56db66ea" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostTutor_ConRutInvalido_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.Login_ConPasswordIncorrecta_Devuelve401" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="4e6772b9-8a29-e29a-3845-b6daad9c9bc6">
+      <Execution id="00907edf-2ba6-419f-be6e-03f9728ef64e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="Login_ConPasswordIncorrecta_Devuelve401" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.PostEspecie_Repetida_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="0742dc3b-c7c4-048e-ac31-e4814b747afe">
+      <Execution id="60b61dfe-843f-47d7-98f2-694b12347545" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="PostEspecie_Repetida_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.GetRazas_PorEspecie_SoloTraeEsaEspecie" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="468692ec-9a28-80e4-5945-98b8e0656c1f">
+      <Execution id="16ed0877-27dd-4872-a21b-002890638cec" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="GetRazas_PorEspecie_SoloTraeEsaEspecie" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.DeleteTutor_ConMascotas_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="60b91b14-888c-b6e2-601e-ed57cd86eb35">
+      <Execution id="9048313b-d489-4e24-9458-7e08c9dfb03f" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="DeleteTutor_ConMascotas_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConFechaDeNacimientoFutura_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="481db82c-dc0d-2c87-24d2-cf2607bdfbea">
+      <Execution id="722baf89-d09f-42b3-9a8c-b66b7700de36" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_ConFechaDeNacimientoFutura_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.PostRaza_ConEspecieInexistente_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="879c8445-b67f-eeaa-0e8f-73ba77448b45">
+      <Execution id="9cbcea24-8f99-4713-b99b-16078bc7b1d8" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="PostRaza_ConEspecieInexistente_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConMicrochipDe10Digitos_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="e176cec6-3caf-0589-06ec-17c2c2ccd8f3">
+      <Execution id="d4980892-bc8c-4fb5-ba34-e4de2c8a7c02" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_ConMicrochipDe10Digitos_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostMascota_ConTutorInexistente_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="3347b92d-d065-2c65-8db6-8464564cc0b9">
+      <Execution id="72062bc9-0baf-4036-9100-e217ea6235fa" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostMascota_ConTutorInexistente_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.AuthYUsuariosTests.GetUsuarios_SinToken_Devuelve401" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="e1dbc72b-5e4d-aed8-e140-b6a9cf831918">
+      <Execution id="97cca793-674a-4db4-95e1-77e8ba414fdd" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.AuthYUsuariosTests" name="GetUsuarios_SinToken_Devuelve401" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.CatalogosTests.PostVeterinario_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="2ed73629-5261-a4b0-94ab-7dcb086975a2">
+      <Execution id="ff43f8ed-6650-4470-961d-d50d73d8a46d" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.CatalogosTests" name="PostVeterinario_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetClinica.Tests.TutoresYMascotasTests.PostTutor_ConRutRepetido_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-clinica.tests\bin\debug\net10.0\pawvetclinica.tests.dll" id="3540d1f8-fc4d-9213-93e6-319b0902816e">
+      <Execution id="b74e8060-ff42-47c8-843b-a9e1ec57dc5c" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica.Tests\bin\Debug\net10.0\PawVetClinica.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetClinica.Tests.TutoresYMascotasTests" name="PostTutor_ConRutRepetido_Devuelve409" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="fe94beb8-740d-d22c-af19-16157c2cc440" executionId="6a8274c7-7b8f-46ec-aa40-6f75fdc76dd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b12d8a46-ad52-d70b-11e1-46d69988d629" executionId="2652e968-4639-408b-aecc-febca22363fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1dbc72b-5e4d-aed8-e140-b6a9cf831918" executionId="97cca793-674a-4db4-95e1-77e8ba414fdd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="879c8445-b67f-eeaa-0e8f-73ba77448b45" executionId="9cbcea24-8f99-4713-b99b-16078bc7b1d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60b91b14-888c-b6e2-601e-ed57cd86eb35" executionId="9048313b-d489-4e24-9458-7e08c9dfb03f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a72a268-462e-b22c-23a7-e4777bb52081" executionId="4b11c4d1-2c71-48b0-9496-b8ce5edcf066" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3eeb6476-804f-1882-7a39-31cf9c9bede7" executionId="74a26a2e-d7a1-472e-8bfe-550cec00e144" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0dbbdc2-b2ad-1fe5-1a7e-c98a3b942be9" executionId="96630f44-ea3d-4d1e-851a-693626e3c8d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58eff422-2555-5173-e872-a6aef2921993" executionId="b31973f9-d894-4654-a52c-aca091c27629" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f6e1930e-b195-ede2-e0be-731c1e0f7fa7" executionId="f29768b6-9054-4e0f-9e83-2e53debdedc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0742dc3b-c7c4-048e-ac31-e4814b747afe" executionId="60b61dfe-843f-47d7-98f2-694b12347545" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bfeed18e-0f7d-124b-44a0-53b14152cf26" executionId="c03d6ad3-a0ce-47cd-b9e2-bc36c4ee71ab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3347b92d-d065-2c65-8db6-8464564cc0b9" executionId="72062bc9-0baf-4036-9100-e217ea6235fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="468692ec-9a28-80e4-5945-98b8e0656c1f" executionId="16ed0877-27dd-4872-a21b-002890638cec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee7da5da-c3c7-5bdf-96a3-b90d3390084d" executionId="c220821d-8137-4b5b-a4bc-b58db019d152" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6cf7c33f-b882-5898-1a12-e88ab5fb83c0" executionId="9b2d73e5-7bf3-4631-9728-adc39aa8f7ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2ed73629-5261-a4b0-94ab-7dcb086975a2" executionId="ff43f8ed-6650-4470-961d-d50d73d8a46d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2fd1340-cd4f-68c2-972c-41b8ec1609a7" executionId="8c276040-9160-4402-a8d3-074ffc7d7aa4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4779f1d-6bcc-688d-780a-f931f4ecddc3" executionId="e4c112c6-f6c3-44a6-8627-a6e2c4374371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edc85b58-4a63-2a4c-2597-a4d054d91829" executionId="e06a5db4-26d5-4231-b8cb-93947da6f373" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e6772b9-8a29-e29a-3845-b6daad9c9bc6" executionId="00907edf-2ba6-419f-be6e-03f9728ef64e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3b08c9c-ac3d-3dfd-d72e-ecedffa525f5" executionId="7e353731-b7eb-45be-af75-c7e3166e3d00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d349e698-b5a2-bfae-dbda-183deacda725" executionId="f2cb6221-289c-4b31-8008-fbacf68cbe04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d8e2f77-8ae6-fd86-b17a-4d5b6281deec" executionId="13ef89f5-d15a-40af-baf5-fe5c55f862b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88b10b95-e0b2-88ff-f067-130b3aea623c" executionId="76d29df5-93ca-4505-b8b2-5844e10e2283" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e176cec6-3caf-0589-06ec-17c2c2ccd8f3" executionId="d4980892-bc8c-4fb5-ba34-e4de2c8a7c02" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="01f964e2-ee3d-5cc7-2fbb-9748194bfb44" executionId="a13cba37-04f1-4853-b5dc-2a1b56db66ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3540d1f8-fc4d-9213-93e6-319b0902816e" executionId="b74e8060-ff42-47c8-843b-a9e1ec57dc5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="61c4a26f-3d91-0be1-d0cf-ee12aaf1fc6e" executionId="3d8a95a2-7c86-44f3-a463-64de3b00f4b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cfa10ec5-8198-7f08-ebb0-17cdb651b57e" executionId="d7ee635a-2b15-4048-b4ec-f0baca340d0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="481db82c-dc0d-2c87-24d2-cf2607bdfbea" executionId="722baf89-d09f-42b3-9a8c-b66b7700de36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="31" executed="31" passed="31" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.9)&#xD;
+[xUnit.net 00:00:00.18]   Discovering: PawVetClinica.Tests&#xD;
+[xUnit.net 00:00:00.23]   Discovered:  PawVetClinica.Tests&#xD;
+[xUnit.net 00:00:00.25]   Starting:    PawVetClinica.Tests&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 12 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 12 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 12 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica[0]&#xD;
+      Usuario administrador creado: admin@pawvet.cl&#xD;
+info: PawVetClinica[0]&#xD;
+      Usuario administrador creado: admin@pawvet.cl&#xD;
+info: PawVetClinica[0]&#xD;
+      Usuario administrador creado: admin@pawvet.cl&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-clinica&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 394 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 394 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 394 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/usuarios/1&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/razas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/razas respondio 400 en 72 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/usuarios/1 respondio 409 en 75 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 134 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/especies/1&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 137 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 257 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 400 en 8 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/especies/1 respondio 409 en 55 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 132 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 125 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 133 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 41 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 400 en 33 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 140 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 146 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 132 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 130 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/usuarios/2&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/usuarios/2 respondio 204 en 13 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/usuarios/2&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 128 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/veterinarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/usuarios/2 respondio 404 en 14 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/veterinarios respondio 403 en 13 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/usuarios respondio 401 en 6 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 130 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 128 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 127 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/razas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/razas respondio 200 en 31 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 127 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 403 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 127 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 128 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 125 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 4 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 126 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/usuarios respondio 403 en 0 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 201 en 82 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/tutores/2&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/tutores/2 respondio 409 en 19 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 126 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 124 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 118 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 121 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/veterinarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/veterinarios respondio 400 en 16 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 119 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 120 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 116 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 117 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/veterinarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/veterinarios respondio 201 en 28 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 118 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 119 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 118 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 117 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 116 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/veterinarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/veterinarios respondio 200 en 12 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 120 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 117 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 119 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/especies&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/especies respondio 409 en 10 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 140 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 145 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 409 en 1 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 201 en 13 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 409 en 3 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 130 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/veterinarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/veterinarios respondio 201 en 6 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/veterinarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/veterinarios respondio 409 en 1 ms (usuario: Administrador PawVet)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 401 en 124 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 121 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 115 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 400 en 5 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 115 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 111 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 113 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 112 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 112 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/tutores/5&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/tutores/5 respondio 204 en 11 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/tutores/5&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/tutores/5 respondio 200 en 18 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 111 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 112 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 113 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 113 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 117 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 112 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 115 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 114 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 114 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/tutores/7&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/tutores/7 respondio 403 en 0 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 112 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 112 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 111 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 114 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 112 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 110 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/mascotas&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/mascotas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 111 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/usuarios&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/usuarios respondio 201 en 112 ms (usuario: Administrador PawVet)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/auth/login&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/auth/login respondio 200 en 112 ms (usuario: anonimo)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/tutores&#xD;
+info: PawVetClinica.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/tutores respondio 409 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:06.95]   Finished:    PawVetClinica.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

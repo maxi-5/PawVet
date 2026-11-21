@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="089b9db6-aeac-4bf7-bef3-c14d96fbed79" name="maxim@LAPTOP-VV4ACHME 2026-11-21 18:22:09" runUser="LAPTOP-VV4ACHME\maxim" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-21T18:22:09.7597795-03:00" queuing="2026-11-21T18:22:09.7597800-03:00" start="2026-11-21T18:22:08.6885023-03:00" finish="2026-11-21T18:22:11.9354099-03:00" />
+  <TestSettings name="default" id="a3f9a79f-4896-4a3a-82f5-87bd09eecbe0">
+    <Deployment runDeploymentRoot="maxim_LAPTOP-VV4ACHME_2026-11-21_18_22_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="1783b255-7931-4f85-be79-21eede05d6c9" testId="0bfb151b-2c3e-3bc0-05ee-e247c4bdd723" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.EstaPorVencer_DentroDelPlazo_DevuelveTrue" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0008211" startTime="2026-11-21T18:22:09.7257634-03:00" endTime="2026-11-21T18:22:09.7258294-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1783b255-7931-4f85-be79-21eede05d6c9" />
+    <UnitTestResult executionId="8f37e29b-ac4e-4f68-8494-8b07658688e6" testId="71897753-0c68-05a2-171f-2e1cb8e9c9d7" testName="PawVetAgenda.Tests.CitasTests.PatchEstado_ConfirmarUnaCitaCancelada_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0106176" startTime="2026-11-21T18:22:11.3830217-03:00" endTime="2026-11-21T18:22:11.3938240-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f37e29b-ac4e-4f68-8494-8b07658688e6" />
+    <UnitTestResult executionId="81cf541c-7b2f-4c4b-8889-f2a589facdef" testId="2fd8b9b1-dfdf-4cb5-212d-9965b11a4d8b" testName="PawVetAgenda.Tests.CitasTests.GetCita_Inexistente_Devuelve404ConProblemDetails" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0123016" startTime="2026-11-21T18:22:11.3608611-03:00" endTime="2026-11-21T18:22:11.3732762-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81cf541c-7b2f-4c4b-8889-f2a589facdef" />
+    <UnitTestResult executionId="d5ac0059-9e70-46c5-abd9-d8dd45e6ec9b" testId="05e75708-d842-567a-4449-19ae12c78b6e" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_SobreCitaAgendada_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0100556" startTime="2026-11-21T18:22:11.4439577-03:00" endTime="2026-11-21T18:22:11.4542927-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5ac0059-9e70-46c5-abd9-d8dd45e6ec9b" />
+    <UnitTestResult executionId="de171198-489c-40da-aafe-de7e70bac77e" testId="bf9b3176-7cc3-3db0-86ec-4db124b6ef36" testName="PawVetAgenda.Tests.CitasTests.PostCita_MismoHorarioOtroVeterinario_Devuelve201" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0095078" startTime="2026-11-21T18:22:11.4536404-03:00" endTime="2026-11-21T18:22:11.4634465-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de171198-489c-40da-aafe-de7e70bac77e" />
+    <UnitTestResult executionId="71b19d93-f36c-4277-a0e4-5bf6bfcdb010" testId="b57ad67f-7d0a-cc88-aa12-3d062714ab22" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.CalcularProximaDosis_SumaElIntervaloDeLaVacuna" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0024584" startTime="2026-11-21T18:22:09.7243347-03:00" endTime="2026-11-21T18:22:09.7244470-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71b19d93-f36c-4277-a0e4-5bf6bfcdb010" />
+    <UnitTestResult executionId="9e303230-b7b1-4306-a121-e41804566ac3" testId="1ebf0e06-93f1-99b6-5990-1e36394f8ec6" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_ConFechaFutura_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0036857" startTime="2026-11-21T18:22:11.5942066-03:00" endTime="2026-11-21T18:22:11.5981173-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9e303230-b7b1-4306-a121-e41804566ac3" />
+    <UnitTestResult executionId="1072cad2-f02c-4766-a21c-f181634bb31e" testId="26f65cd8-9d57-f450-1342-f8c3a0bcca27" testName="PawVetAgenda.Tests.CitasTests.PostCita_ConApiClinicaCaida_Devuelve503" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0041035" startTime="2026-11-21T18:22:11.5098393-03:00" endTime="2026-11-21T18:22:11.5142223-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1072cad2-f02c-4766-a21c-f181634bb31e" />
+    <UnitTestResult executionId="02b9a4e9-9908-40ed-9ddd-b0a8eafc4824" testId="aba78b77-4ef2-7605-e0f8-ca1b63657987" testName="PawVetAgenda.Tests.CitasTests.PostCita_ConMascotaInexistenteEnClinica_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0054527" startTime="2026-11-21T18:22:11.4476638-03:00" endTime="2026-11-21T18:22:11.4534364-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02b9a4e9-9908-40ed-9ddd-b0a8eafc4824" />
+    <UnitTestResult executionId="0b70f222-9082-4b1f-905b-5e0782d77a60" testId="45f121d0-c2d7-863e-f601-19cfbc77343e" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_Valida_CalculaLaProximaDosis" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0975763" startTime="2026-11-21T18:22:11.4544013-03:00" endTime="2026-11-21T18:22:11.5524534-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b70f222-9082-4b1f-905b-5e0782d77a60" />
+    <UnitTestResult executionId="c9e74bbb-2dd5-45fe-b422-09dc058961a2" testId="3f6c4106-4da2-0871-f941-da135dd880c8" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_CitaCancelada_NoBloqueaElHorario" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0002695" startTime="2026-11-21T18:22:09.6833095-03:00" endTime="2026-11-21T18:22:09.6833522-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9e74bbb-2dd5-45fe-b422-09dc058961a2" />
+    <UnitTestResult executionId="74376fc5-9655-4c6a-9714-1fa4039589ba" testId="81e057eb-dfa8-ca92-818d-9730bcef8be7" testName="PawVetAgenda.Tests.CitasTests.PostCita_EnDiaFeriado_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0104631" startTime="2026-11-21T18:22:11.3443900-03:00" endTime="2026-11-21T18:22:11.3550258-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="74376fc5-9655-4c6a-9714-1fa4039589ba" />
+    <UnitTestResult executionId="12e6a9f0-539e-4b9e-a5eb-7a804a54a0f3" testId="fc7dcdbe-a2df-d6db-62c9-ca2eeed27bb0" testName="PawVetAgenda.Tests.CitasTests.PostCita_SinToken_Devuelve401" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0129983" startTime="2026-11-21T18:22:11.3308143-03:00" endTime="2026-11-21T18:22:11.3441177-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12e6a9f0-539e-4b9e-a5eb-7a804a54a0f3" />
+    <UnitTestResult executionId="80a155f8-366d-46e8-9ba5-4bf292e56475" testId="9b178fc6-8390-af97-5031-9f5ea80faa04" testName="PawVetAgenda.Tests.CitasTests.PatchEstado_NoAsistioAntesDeLaHora_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0080357" startTime="2026-11-21T18:22:11.4974592-03:00" endTime="2026-11-21T18:22:11.5057077-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80a155f8-366d-46e8-9ba5-4bf292e56475" />
+    <UnitTestResult executionId="6e386f20-f04f-4750-815f-299a12d17f20" testId="79923ce4-a5b3-bcb8-0539-97710e9c8a64" testName="PawVetAgenda.Tests.CitasTests.PatchEstado_ConEstadoNoPermitido_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0089648" startTime="2026-11-21T18:22:11.3735363-03:00" endTime="2026-11-21T18:22:11.3827822-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e386f20-f04f-4750-815f-299a12d17f20" />
+    <UnitTestResult executionId="c99b85ba-2441-417d-95a9-bac18eea9add" testId="b7c1e634-0195-a135-7be5-b0aed3271dd7" testName="PawVetAgenda.Tests.CitasTests.PostCita_EnHorarioDeUnaCitaCancelada_Devuelve201" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0276575" startTime="2026-11-21T18:22:11.4692339-03:00" endTime="2026-11-21T18:22:11.4972755-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c99b85ba-2441-417d-95a9-bac18eea9add" />
+    <UnitTestResult executionId="6ff4beba-381c-4eff-99f7-9a50be689c1d" testId="e798297a-dbd3-4b14-7336-56c408248634" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_SobreCitaConfirmada_Devuelve201YLaCitaQuedaAtendida" computerName="LAPTOP-VV4ACHME" duration="00:00:01.7591267" startTime="2026-11-21T18:22:09.6539466-03:00" endTime="2026-11-21T18:22:11.4169641-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ff4beba-381c-4eff-99f7-9a50be689c1d" />
+    <UnitTestResult executionId="6948f776-0b7c-4df2-b833-35d091f77fd7" testId="23ce2da9-ce8a-554c-8835-a90f9aae0fa5" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.MarcarAtendida_CitaAgendada_LanzaTransicionInvalida" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0015468" startTime="2026-11-21T18:22:09.7252585-03:00" endTime="2026-11-21T18:22:09.7253291-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6948f776-0b7c-4df2-b833-35d091f77fd7" />
+    <UnitTestResult executionId="a8a64e1f-71e3-4136-bd34-93e5efda430e" testId="fa65f7bf-3552-6e62-9bf8-90bfcca049fa" testName="PawVetAgenda.Tests.CitasTests.PostCita_ConFechaPasada_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0035303" startTime="2026-11-21T18:22:11.5059144-03:00" endTime="2026-11-21T18:22:11.5096751-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8a64e1f-71e3-4136-bd34-93e5efda430e" />
+    <UnitTestResult executionId="ba532715-c58c-473a-ad9c-1e9b669dcab7" testId="fae51b3f-f537-fd8b-a947-49aaea82c51e" testName="PawVetAgenda.Tests.CitasTests.DeleteCita_ComoAdministrador_Devuelve204" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0212378" startTime="2026-11-21T18:22:11.5214314-03:00" endTime="2026-11-21T18:22:11.5429446-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba532715-c58c-473a-ad9c-1e9b669dcab7" />
+    <UnitTestResult executionId="92eb4efc-b8c6-43db-95d2-a4ce2109b2a0" testId="64048b3c-05a5-8a60-0308-3557f338d1ae" testName="PawVetAgenda.Tests.CitasTests.PostCita_QueSeTopaConOtraDelMismoVeterinario_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0064233" startTime="2026-11-21T18:22:11.5144228-03:00" endTime="2026-11-21T18:22:11.5211949-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92eb4efc-b8c6-43db-95d2-a4ce2109b2a0" />
+    <UnitTestResult executionId="6e4e1ac6-8ed4-40f2-95e4-c61f0da06895" testId="41a4feb0-baf1-e074-de2d-5f8818d55e64" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.Cancelar_CitaAtendida_LanzaTransicionInvalida" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0003902" startTime="2026-11-21T18:22:09.7255260-03:00" endTime="2026-11-21T18:22:09.7256021-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e4e1ac6-8ed4-40f2-95e4-c61f0da06895" />
+    <UnitTestResult executionId="f5d5fede-7eba-4359-b908-54ec2e32f66e" testId="4a189c8c-28d3-d2bf-a38e-97afc23a706e" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_ConApiClinicaCaida_Devuelve503" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0264832" startTime="2026-11-21T18:22:11.4171653-03:00" endTime="2026-11-21T18:22:11.4438412-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5d5fede-7eba-4359-b908-54ec2e32f66e" />
+    <UnitTestResult executionId="1ccc2f67-efeb-4271-a1f2-10d2eed98198" testId="6d72a734-a445-916e-89c0-9e1a22fc5750" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_VacunaDeOtraEspecie_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0047940" startTime="2026-11-21T18:22:11.6629079-03:00" endTime="2026-11-21T18:22:11.6679608-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ccc2f67-efeb-4271-a1f2-10d2eed98198" />
+    <UnitTestResult executionId="aeb234fd-98f5-4490-a883-671e1cd239c0" testId="bb6d66f7-cebe-0990-bbd1-637dba0265d1" testName="PawVetAgenda.Tests.CitasTests.PostCita_ComoVeterinario_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0050103" startTime="2026-11-21T18:22:11.3552019-03:00" endTime="2026-11-21T18:22:11.3604238-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aeb234fd-98f5-4490-a883-671e1cd239c0" />
+    <UnitTestResult executionId="5cf13615-5f96-4bbf-8727-3048d878ecca" testId="e31fa779-2dee-9caa-2d7b-48072b6486ab" testName="PawVetAgenda.Tests.CitasTests.PatchEstado_Confirmar_Devuelve200" computerName="LAPTOP-VV4ACHME" duration="00:00:01.6047647" startTime="2026-11-21T18:22:09.6540138-03:00" endTime="2026-11-21T18:22:11.2663865-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cf13615-5f96-4bbf-8727-3048d878ecca" />
+    <UnitTestResult executionId="e81c8ad9-76b9-4265-8d8e-3ce1a8d0fc6e" testId="3d2c5569-11ac-eccf-b5bd-4f578fd91449" testName="PawVetAgenda.Tests.CitasTests.DeleteCita_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0059458" startTime="2026-11-21T18:22:11.4368390-03:00" endTime="2026-11-21T18:22:11.4430639-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e81c8ad9-76b9-4265-8d8e-3ce1a8d0fc6e" />
+    <UnitTestResult executionId="ce240aea-a94c-4c3c-814a-a1c113f9ac34" testId="715617f6-c39d-8f17-e4fb-6545842a44fe" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.GetVacunaciones_SinIdMascota_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0099424" startTime="2026-11-21T18:22:11.6520250-03:00" endTime="2026-11-21T18:22:11.6626783-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce240aea-a94c-4c3c-814a-a1c113f9ac34" />
+    <UnitTestResult executionId="4cda06d3-bcf7-48b0-8f1a-a12ea60d5e03" testId="6d26f136-b077-3826-0d6a-3ea8b45d98da" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_DeCitaDeOtroVeterinario_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0099770" startTime="2026-11-21T18:22:11.5839973-03:00" endTime="2026-11-21T18:22:11.5940106-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cda06d3-bcf7-48b0-8f1a-a12ea60d5e03" />
+    <UnitTestResult executionId="de778e5f-37c5-4955-ba46-c9c0b891c71f" testId="12ec62eb-d49c-86fd-389b-a9437931e7a7" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_DosVecesLaMismaCita_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0136032" startTime="2026-11-21T18:22:11.7064942-03:00" endTime="2026-11-21T18:22:11.7204360-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de778e5f-37c5-4955-ba46-c9c0b891c71f" />
+    <UnitTestResult executionId="d2eb6021-9058-4252-ba00-47c4ba81db94" testId="471e34fe-5004-3a47-62ca-597e3bd9c7f2" testName="PawVetAgenda.Tests.CitasTests.PutCita_Cancelada_Devuelve409" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0619017" startTime="2026-11-21T18:22:11.2682968-03:00" endTime="2026-11-21T18:22:11.3306312-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2eb6021-9058-4252-ba00-47c4ba81db94" />
+    <UnitTestResult executionId="ff65d7c4-a073-4174-a1c8-5942f692494d" testId="8a8a21f5-5fb6-b23b-bd39-bdaaaae5610d" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0110041" startTime="2026-11-21T18:22:11.5526487-03:00" endTime="2026-11-21T18:22:11.5640278-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff65d7c4-a073-4174-a1c8-5942f692494d" />
+    <UnitTestResult executionId="32cca71b-d580-44fa-a653-4de570520654" testId="1f5eb53b-25c2-37d5-9830-4282428f6da8" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.Confirmar_CitaAgendadaFutura_PasaAConfirmada" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0026444" startTime="2026-11-21T18:22:09.6834872-03:00" endTime="2026-11-21T18:22:09.6835234-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32cca71b-d580-44fa-a653-4de570520654" />
+    <UnitTestResult executionId="937afbeb-2bc2-4479-9bcc-6619d3947acb" testId="57303866-8793-f67e-5c25-d43943ea5db3" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_CambiaLaFecha_RecalculaLaProximaDosis" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0074495" startTime="2026-11-21T18:22:11.6439900-03:00" endTime="2026-11-21T18:22:11.6517935-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="937afbeb-2bc2-4479-9bcc-6619d3947acb" />
+    <UnitTestResult executionId="ba2daa26-0bad-4304-a661-b1cfcc99b1b0" testId="bb07edee-c16f-03df-354a-053a2ed915ae" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: -30, seTopa: False)" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0000019" startTime="2026-11-21T18:22:09.6821623-03:00" endTime="2026-11-21T18:22:09.6822300-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba2daa26-0bad-4304-a661-b1cfcc99b1b0" />
+    <UnitTestResult executionId="e444d5e9-4bee-45c9-990e-d2bacd4698e6" testId="57d2ab37-558d-d278-1a33-4af64dfc36ff" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_ComoRecepcionista_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0034334" startTime="2026-11-21T18:22:11.7031732-03:00" endTime="2026-11-21T18:22:11.7062583-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e444d5e9-4bee-45c9-990e-d2bacd4698e6" />
+    <UnitTestResult executionId="2dc9d45a-ad51-412e-b276-86967e485c81" testId="ee381e4e-2362-05c9-680a-cf6ecb7c338e" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 0, seTopa: True)" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0082251" startTime="2026-11-21T18:22:09.6519145-03:00" endTime="2026-11-21T18:22:09.6690232-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2dc9d45a-ad51-412e-b276-86967e485c81" />
+    <UnitTestResult executionId="fe71c931-6873-4c22-ab09-bdad4916db75" testId="42a57deb-43d9-7b5e-b8f1-9fcad114a205" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_ConTemperaturaFueraDeRango_Devuelve400" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0105296" startTime="2026-11-21T18:22:11.6330600-03:00" endTime="2026-11-21T18:22:11.6438132-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe71c931-6873-4c22-ab09-bdad4916db75" />
+    <UnitTestResult executionId="c259e89c-9c50-48ba-bdb2-1adbffeebb25" testId="b3d92a86-077e-56c7-122a-004411c17aea" testName="PawVetAgenda.Tests.CitasTests.GetMiAgenda_SoloDevuelveLasCitasDelVeterinarioLogueado" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0344967" startTime="2026-11-21T18:22:11.4028750-03:00" endTime="2026-11-21T18:22:11.4365760-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c259e89c-9c50-48ba-bdb2-1adbffeebb25" />
+    <UnitTestResult executionId="710e5d5d-c109-4229-a03e-70e19d9aaf72" testId="95d6eee7-a4c8-4692-367f-5f1816282834" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.GetPorVencer_IncluyeVacunaQueVenceEnLosProximosDias" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0343042" startTime="2026-11-21T18:22:11.5983282-03:00" endTime="2026-11-21T18:22:11.6328528-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="710e5d5d-c109-4229-a03e-70e19d9aaf72" />
+    <UnitTestResult executionId="4313b26b-d701-4602-8c0e-538224991faa" testId="35bb6936-bfee-4384-c125-fbe278aedeb3" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.MarcarNoAsistio_DespuesDeLaHora_PasaANoAsistio" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0002883" startTime="2026-11-21T18:22:09.7249850-03:00" endTime="2026-11-21T18:22:09.7250651-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4313b26b-d701-4602-8c0e-538224991faa" />
+    <UnitTestResult executionId="dde99191-5aa0-4c8f-a67d-6a2615f35e8a" testId="f481d9bc-b23b-bf31-f7e9-379fa09645bc" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 30, seTopa: False)" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0002754" startTime="2026-11-21T18:22:09.6810342-03:00" endTime="2026-11-21T18:22:09.6811047-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dde99191-5aa0-4c8f-a67d-6a2615f35e8a" />
+    <UnitTestResult executionId="0fcc5e97-1179-4628-906c-3b4de22ce02c" testId="6db2c9a8-f1ee-353b-d4c5-0e626deb870f" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_Inexistente_Devuelve404" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0190004" startTime="2026-11-21T18:22:11.5657152-03:00" endTime="2026-11-21T18:22:11.5836268-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0fcc5e97-1179-4628-906c-3b4de22ce02c" />
+    <UnitTestResult executionId="6979eb30-3385-4a76-8483-adcc6f2eb238" testId="05a51527-72ab-2ed2-de4e-5e8c97c58fd9" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 15, seTopa: True)" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0000023" startTime="2026-11-21T18:22:09.6819845-03:00" endTime="2026-11-21T18:22:09.6820457-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6979eb30-3385-4a76-8483-adcc6f2eb238" />
+    <UnitTestResult executionId="c90f2b38-70b1-46f8-afa7-a9fd74ae9024" testId="8f79651b-1003-3332-ec58-97623574da27" testName="PawVetAgenda.Tests.CitasTests.GetMiAgenda_VeterinarioSinFicha_Devuelve403" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0034710" startTime="2026-11-21T18:22:11.4432904-03:00" endTime="2026-11-21T18:22:11.4474376-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c90f2b38-70b1-46f8-afa7-a9fd74ae9024" />
+    <UnitTestResult executionId="834c0b01-9739-41ee-b026-7ab210546e06" testId="5257da0e-7b55-dc4c-90b5-a856d0c7d1f5" testName="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: -20, seTopa: True)" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0000060" startTime="2026-11-21T18:22:09.6817807-03:00" endTime="2026-11-21T18:22:09.6818433-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="834c0b01-9739-41ee-b026-7ab210546e06" />
+    <UnitTestResult executionId="5247d6e8-b94f-4ece-9dbd-382b6be3d791" testId="bbd96e57-4f2d-310b-eaa3-644bd700b507" testName="PawVetAgenda.Tests.CitasTests.PostCita_Valida_Devuelve201EnEstadoAgendada" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0051677" startTime="2026-11-21T18:22:11.4644650-03:00" endTime="2026-11-21T18:22:11.4690772-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5247d6e8-b94f-4ece-9dbd-382b6be3d791" />
+    <UnitTestResult executionId="3a6290f9-a974-484f-98cd-cee9dc22eeaa" testId="19b3b304-9a81-a519-04c2-9308b1f8cb72" testName="PawVetAgenda.Tests.CitasTests.PutCita_Reprogramar_Devuelve204" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0068945" startTime="2026-11-21T18:22:11.3940217-03:00" endTime="2026-11-21T18:22:11.4015125-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a6290f9-a974-484f-98cd-cee9dc22eeaa" />
+    <UnitTestResult executionId="e6dfd4bc-3d82-4dbe-a22a-af0c27d84517" testId="5b723d50-1d0e-1840-8c28-92daecd86d7a" testName="PawVetAgenda.Tests.AtencionesYVacunasTests.GetAtenciones_PorMascota_DevuelveElHistorial" computerName="LAPTOP-VV4ACHME" duration="00:00:00.0336259" startTime="2026-11-21T18:22:11.6682069-03:00" endTime="2026-11-21T18:22:11.7021772-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6dfd4bc-3d82-4dbe-a22a-af0c27d84517" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_DosVecesLaMismaCita_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="12ec62eb-d49c-86fd-389b-a9437931e7a7">
+      <Execution id="de778e5f-37c5-4955-ba46-c9c0b891c71f" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_DosVecesLaMismaCita_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.EstaPorVencer_DentroDelPlazo_DevuelveTrue" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="0bfb151b-2c3e-3bc0-05ee-e247c4bdd723">
+      <Execution id="1783b255-7931-4f85-be79-21eede05d6c9" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="EstaPorVencer_DentroDelPlazo_DevuelveTrue" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 15, seTopa: True)" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="05a51527-72ab-2ed2-de4e-5e8c97c58fd9">
+      <Execution id="6979eb30-3385-4a76-8483-adcc6f2eb238" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_DetectaSolapamientoDeHorarios" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.Cancelar_CitaAtendida_LanzaTransicionInvalida" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="41a4feb0-baf1-e074-de2d-5f8818d55e64">
+      <Execution id="6e4e1ac6-8ed4-40f2-95e4-c61f0da06895" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="Cancelar_CitaAtendida_LanzaTransicionInvalida" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_Valida_CalculaLaProximaDosis" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="45f121d0-c2d7-863e-f601-19cfbc77343e">
+      <Execution id="0b70f222-9082-4b1f-905b-5e0782d77a60" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostVacunacion_Valida_CalculaLaProximaDosis" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.DeleteCita_ComoAdministrador_Devuelve204" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="fae51b3f-f537-fd8b-a947-49aaea82c51e">
+      <Execution id="ba532715-c58c-473a-ad9c-1e9b669dcab7" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="DeleteCita_ComoAdministrador_Devuelve204" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_ConApiClinicaCaida_Devuelve503" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="26f65cd8-9d57-f450-1342-f8c3a0bcca27">
+      <Execution id="1072cad2-f02c-4766-a21c-f181634bb31e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_ConApiClinicaCaida_Devuelve503" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_Inexistente_Devuelve404" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="6db2c9a8-f1ee-353b-d4c5-0e626deb870f">
+      <Execution id="0fcc5e97-1179-4628-906c-3b4de22ce02c" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PutVacunacion_Inexistente_Devuelve404" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PatchEstado_ConEstadoNoPermitido_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="79923ce4-a5b3-bcb8-0539-97710e9c8a64">
+      <Execution id="6e386f20-f04f-4750-815f-299a12d17f20" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PatchEstado_ConEstadoNoPermitido_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.Confirmar_CitaAgendadaFutura_PasaAConfirmada" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="1f5eb53b-25c2-37d5-9830-4282428f6da8">
+      <Execution id="32cca71b-d580-44fa-a653-4de570520654" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="Confirmar_CitaAgendadaFutura_PasaAConfirmada" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_ConFechaPasada_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="fa65f7bf-3552-6e62-9bf8-90bfcca049fa">
+      <Execution id="a8a64e1f-71e3-4136-bd34-93e5efda430e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_ConFechaPasada_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PatchEstado_Confirmar_Devuelve200" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="e31fa779-2dee-9caa-2d7b-48072b6486ab">
+      <Execution id="5cf13615-5f96-4bbf-8727-3048d878ecca" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PatchEstado_Confirmar_Devuelve200" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PutCita_Cancelada_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="471e34fe-5004-3a47-62ca-597e3bd9c7f2">
+      <Execution id="d2eb6021-9058-4252-ba00-47c4ba81db94" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PutCita_Cancelada_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_SinToken_Devuelve401" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="fc7dcdbe-a2df-d6db-62c9-ca2eeed27bb0">
+      <Execution id="12e6a9f0-539e-4b9e-a5eb-7a804a54a0f3" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_SinToken_Devuelve401" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.GetMiAgenda_VeterinarioSinFicha_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="8f79651b-1003-3332-ec58-97623574da27">
+      <Execution id="c90f2b38-70b1-46f8-afa7-a9fd74ae9024" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="GetMiAgenda_VeterinarioSinFicha_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_ComoVeterinario_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="bb6d66f7-cebe-0990-bbd1-637dba0265d1">
+      <Execution id="aeb234fd-98f5-4490-a883-671e1cd239c0" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_ComoVeterinario_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_ConMascotaInexistenteEnClinica_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="aba78b77-4ef2-7605-e0f8-ca1b63657987">
+      <Execution id="02b9a4e9-9908-40ed-9ddd-b0a8eafc4824" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_ConMascotaInexistenteEnClinica_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: -30, seTopa: False)" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="bb07edee-c16f-03df-354a-053a2ed915ae">
+      <Execution id="ba2daa26-0bad-4304-a661-b1cfcc99b1b0" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_DetectaSolapamientoDeHorarios" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_QueSeTopaConOtraDelMismoVeterinario_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="64048b3c-05a5-8a60-0308-3557f338d1ae">
+      <Execution id="92eb4efc-b8c6-43db-95d2-a4ce2109b2a0" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_QueSeTopaConOtraDelMismoVeterinario_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_MismoHorarioOtroVeterinario_Devuelve201" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="bf9b3176-7cc3-3db0-86ec-4db124b6ef36">
+      <Execution id="de171198-489c-40da-aafe-de7e70bac77e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_MismoHorarioOtroVeterinario_Devuelve201" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 30, seTopa: False)" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="f481d9bc-b23b-bf31-f7e9-379fa09645bc">
+      <Execution id="dde99191-5aa0-4c8f-a67d-6a2615f35e8a" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_DetectaSolapamientoDeHorarios" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PatchEstado_ConfirmarUnaCitaCancelada_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="71897753-0c68-05a2-171f-2e1cb8e9c9d7">
+      <Execution id="8f37e29b-ac4e-4f68-8494-8b07658688e6" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PatchEstado_ConfirmarUnaCitaCancelada_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_ConFechaFutura_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="1ebf0e06-93f1-99b6-5990-1e36394f8ec6">
+      <Execution id="9e303230-b7b1-4306-a121-e41804566ac3" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostVacunacion_ConFechaFutura_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.DeleteCita_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="3d2c5569-11ac-eccf-b5bd-4f578fd91449">
+      <Execution id="e81c8ad9-76b9-4265-8d8e-3ce1a8d0fc6e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="DeleteCita_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.MarcarNoAsistio_DespuesDeLaHora_PasaANoAsistio" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="35bb6936-bfee-4384-c125-fbe278aedeb3">
+      <Execution id="4313b26b-d701-4602-8c0e-538224991faa" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="MarcarNoAsistio_DespuesDeLaHora_PasaANoAsistio" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.GetMiAgenda_SoloDevuelveLasCitasDelVeterinarioLogueado" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="b3d92a86-077e-56c7-122a-004411c17aea">
+      <Execution id="c259e89c-9c50-48ba-bdb2-1adbffeebb25" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="GetMiAgenda_SoloDevuelveLasCitasDelVeterinarioLogueado" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.MarcarAtendida_CitaAgendada_LanzaTransicionInvalida" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="23ce2da9-ce8a-554c-8835-a90f9aae0fa5">
+      <Execution id="6948f776-0b7c-4df2-b833-35d091f77fd7" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="MarcarAtendida_CitaAgendada_LanzaTransicionInvalida" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_EnDiaFeriado_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="81e057eb-dfa8-ca92-818d-9730bcef8be7">
+      <Execution id="74376fc5-9655-4c6a-9714-1fa4039589ba" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_EnDiaFeriado_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_DeCitaDeOtroVeterinario_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="6d26f136-b077-3826-0d6a-3ea8b45d98da">
+      <Execution id="4cda06d3-bcf7-48b0-8f1a-a12ea60d5e03" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_DeCitaDeOtroVeterinario_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PutCita_Reprogramar_Devuelve204" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="19b3b304-9a81-a519-04c2-9308b1f8cb72">
+      <Execution id="3a6290f9-a974-484f-98cd-cee9dc22eeaa" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PutCita_Reprogramar_Devuelve204" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_ConApiClinicaCaida_Devuelve503" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="4a189c8c-28d3-d2bf-a38e-97afc23a706e">
+      <Execution id="f5d5fede-7eba-4359-b908-54ec2e32f66e" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostVacunacion_ConApiClinicaCaida_Devuelve503" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.CalcularProximaDosis_SumaElIntervaloDeLaVacuna" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="b57ad67f-7d0a-cc88-aa12-3d062714ab22">
+      <Execution id="71b19d93-f36c-4277-a0e4-5bf6bfcdb010" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="CalcularProximaDosis_SumaElIntervaloDeLaVacuna" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.GetVacunaciones_SinIdMascota_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="715617f6-c39d-8f17-e4fb-6545842a44fe">
+      <Execution id="ce240aea-a94c-4c3c-814a-a1c113f9ac34" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="GetVacunaciones_SinIdMascota_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.GetCita_Inexistente_Devuelve404ConProblemDetails" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="2fd8b9b1-dfdf-4cb5-212d-9965b11a4d8b">
+      <Execution id="81cf541c-7b2f-4c4b-8889-f2a589facdef" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="GetCita_Inexistente_Devuelve404ConProblemDetails" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostVacunacion_VacunaDeOtraEspecie_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="6d72a734-a445-916e-89c0-9e1a22fc5750">
+      <Execution id="1ccc2f67-efeb-4271-a1f2-10d2eed98198" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostVacunacion_VacunaDeOtraEspecie_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="8a8a21f5-5fb6-b23b-bd39-bdaaaae5610d">
+      <Execution id="ff65d7c4-a073-4174-a1c8-5942f692494d" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: 0, seTopa: True)" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="ee381e4e-2362-05c9-680a-cf6ecb7c338e">
+      <Execution id="2dc9d45a-ad51-412e-b276-86967e485c81" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_DetectaSolapamientoDeHorarios" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PatchEstado_NoAsistioAntesDeLaHora_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="9b178fc6-8390-af97-5031-9f5ea80faa04">
+      <Execution id="80a155f8-366d-46e8-9ba5-4bf292e56475" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PatchEstado_NoAsistioAntesDeLaHora_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_SobreCitaConfirmada_Devuelve201YLaCitaQuedaAtendida" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="e798297a-dbd3-4b14-7336-56c408248634">
+      <Execution id="6ff4beba-381c-4eff-99f7-9a50be689c1d" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_SobreCitaConfirmada_Devuelve201YLaCitaQuedaAtendida" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_ConTemperaturaFueraDeRango_Devuelve400" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="42a57deb-43d9-7b5e-b8f1-9fcad114a205">
+      <Execution id="fe71c931-6873-4c22-ab09-bdad4916db75" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_ConTemperaturaFueraDeRango_Devuelve400" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_Valida_Devuelve201EnEstadoAgendada" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="bbd96e57-4f2d-310b-eaa3-644bd700b507">
+      <Execution id="5247d6e8-b94f-4ece-9dbd-382b6be3d791" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_Valida_Devuelve201EnEstadoAgendada" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PostAtencion_SobreCitaAgendada_Devuelve409" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="05e75708-d842-567a-4449-19ae12c78b6e">
+      <Execution id="d5ac0059-9e70-46c5-abd9-d8dd45e6ec9b" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PostAtencion_SobreCitaAgendada_Devuelve409" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.GetPorVencer_IncluyeVacunaQueVenceEnLosProximosDias" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="95d6eee7-a4c8-4692-367f-5f1816282834">
+      <Execution id="710e5d5d-c109-4229-a03e-70e19d9aaf72" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="GetPorVencer_IncluyeVacunaQueVenceEnLosProximosDias" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_ComoRecepcionista_Devuelve403" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="57d2ab37-558d-d278-1a33-4af64dfc36ff">
+      <Execution id="e444d5e9-4bee-45c9-990e-d2bacd4698e6" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PutVacunacion_ComoRecepcionista_Devuelve403" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.CitasTests.PostCita_EnHorarioDeUnaCitaCancelada_Devuelve201" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="b7c1e634-0195-a135-7be5-b0aed3271dd7">
+      <Execution id="c99b85ba-2441-417d-95a9-bac18eea9add" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.CitasTests" name="PostCita_EnHorarioDeUnaCitaCancelada_Devuelve201" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.GetAtenciones_PorMascota_DevuelveElHistorial" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="5b723d50-1d0e-1840-8c28-92daecd86d7a">
+      <Execution id="e6dfd4bc-3d82-4dbe-a22a-af0c27d84517" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="GetAtenciones_PorMascota_DevuelveElHistorial" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_DetectaSolapamientoDeHorarios(minutosDesplazamiento: -20, seTopa: True)" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="5257da0e-7b55-dc4c-90b5-a856d0c7d1f5">
+      <Execution id="834c0b01-9739-41ee-b026-7ab210546e06" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_DetectaSolapamientoDeHorarios" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.ReglasDeNegocioTests.SeTopaCon_CitaCancelada_NoBloqueaElHorario" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="3f6c4106-4da2-0871-f941-da135dd880c8">
+      <Execution id="c9e74bbb-2dd5-45fe-b422-09dc058961a2" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.ReglasDeNegocioTests" name="SeTopaCon_CitaCancelada_NoBloqueaElHorario" />
+    </UnitTest>
+    <UnitTest name="PawVetAgenda.Tests.AtencionesYVacunasTests.PutVacunacion_CambiaLaFecha_RecalculaLaProximaDosis" storage="c:\users\maxim\onedrive\desktop\pawvet-trabajo3\pawvet-trabajo3\api-agenda.tests\bin\debug\net10.0\pawvetagenda.tests.dll" id="57303866-8793-f67e-5c25-d43943ea5db3">
+      <Execution id="937afbeb-2bc2-4479-9bcc-6619d3947acb" />
+      <TestMethod codeBase="C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda.Tests\bin\Debug\net10.0\PawVetAgenda.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="PawVetAgenda.Tests.AtencionesYVacunasTests" name="PutVacunacion_CambiaLaFecha_RecalculaLaProximaDosis" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="0bfb151b-2c3e-3bc0-05ee-e247c4bdd723" executionId="1783b255-7931-4f85-be79-21eede05d6c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71897753-0c68-05a2-171f-2e1cb8e9c9d7" executionId="8f37e29b-ac4e-4f68-8494-8b07658688e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2fd8b9b1-dfdf-4cb5-212d-9965b11a4d8b" executionId="81cf541c-7b2f-4c4b-8889-f2a589facdef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05e75708-d842-567a-4449-19ae12c78b6e" executionId="d5ac0059-9e70-46c5-abd9-d8dd45e6ec9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf9b3176-7cc3-3db0-86ec-4db124b6ef36" executionId="de171198-489c-40da-aafe-de7e70bac77e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b57ad67f-7d0a-cc88-aa12-3d062714ab22" executionId="71b19d93-f36c-4277-a0e4-5bf6bfcdb010" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ebf0e06-93f1-99b6-5990-1e36394f8ec6" executionId="9e303230-b7b1-4306-a121-e41804566ac3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26f65cd8-9d57-f450-1342-f8c3a0bcca27" executionId="1072cad2-f02c-4766-a21c-f181634bb31e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aba78b77-4ef2-7605-e0f8-ca1b63657987" executionId="02b9a4e9-9908-40ed-9ddd-b0a8eafc4824" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45f121d0-c2d7-863e-f601-19cfbc77343e" executionId="0b70f222-9082-4b1f-905b-5e0782d77a60" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f6c4106-4da2-0871-f941-da135dd880c8" executionId="c9e74bbb-2dd5-45fe-b422-09dc058961a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="81e057eb-dfa8-ca92-818d-9730bcef8be7" executionId="74376fc5-9655-4c6a-9714-1fa4039589ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc7dcdbe-a2df-d6db-62c9-ca2eeed27bb0" executionId="12e6a9f0-539e-4b9e-a5eb-7a804a54a0f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b178fc6-8390-af97-5031-9f5ea80faa04" executionId="80a155f8-366d-46e8-9ba5-4bf292e56475" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79923ce4-a5b3-bcb8-0539-97710e9c8a64" executionId="6e386f20-f04f-4750-815f-299a12d17f20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b7c1e634-0195-a135-7be5-b0aed3271dd7" executionId="c99b85ba-2441-417d-95a9-bac18eea9add" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e798297a-dbd3-4b14-7336-56c408248634" executionId="6ff4beba-381c-4eff-99f7-9a50be689c1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23ce2da9-ce8a-554c-8835-a90f9aae0fa5" executionId="6948f776-0b7c-4df2-b833-35d091f77fd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa65f7bf-3552-6e62-9bf8-90bfcca049fa" executionId="a8a64e1f-71e3-4136-bd34-93e5efda430e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fae51b3f-f537-fd8b-a947-49aaea82c51e" executionId="ba532715-c58c-473a-ad9c-1e9b669dcab7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64048b3c-05a5-8a60-0308-3557f338d1ae" executionId="92eb4efc-b8c6-43db-95d2-a4ce2109b2a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="41a4feb0-baf1-e074-de2d-5f8818d55e64" executionId="6e4e1ac6-8ed4-40f2-95e4-c61f0da06895" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4a189c8c-28d3-d2bf-a38e-97afc23a706e" executionId="f5d5fede-7eba-4359-b908-54ec2e32f66e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d72a734-a445-916e-89c0-9e1a22fc5750" executionId="1ccc2f67-efeb-4271-a1f2-10d2eed98198" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb6d66f7-cebe-0990-bbd1-637dba0265d1" executionId="aeb234fd-98f5-4490-a883-671e1cd239c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e31fa779-2dee-9caa-2d7b-48072b6486ab" executionId="5cf13615-5f96-4bbf-8727-3048d878ecca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d2c5569-11ac-eccf-b5bd-4f578fd91449" executionId="e81c8ad9-76b9-4265-8d8e-3ce1a8d0fc6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="715617f6-c39d-8f17-e4fb-6545842a44fe" executionId="ce240aea-a94c-4c3c-814a-a1c113f9ac34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d26f136-b077-3826-0d6a-3ea8b45d98da" executionId="4cda06d3-bcf7-48b0-8f1a-a12ea60d5e03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12ec62eb-d49c-86fd-389b-a9437931e7a7" executionId="de778e5f-37c5-4955-ba46-c9c0b891c71f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="471e34fe-5004-3a47-62ca-597e3bd9c7f2" executionId="d2eb6021-9058-4252-ba00-47c4ba81db94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a8a21f5-5fb6-b23b-bd39-bdaaaae5610d" executionId="ff65d7c4-a073-4174-a1c8-5942f692494d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f5eb53b-25c2-37d5-9830-4282428f6da8" executionId="32cca71b-d580-44fa-a653-4de570520654" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57303866-8793-f67e-5c25-d43943ea5db3" executionId="937afbeb-2bc2-4479-9bcc-6619d3947acb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb07edee-c16f-03df-354a-053a2ed915ae" executionId="ba2daa26-0bad-4304-a661-b1cfcc99b1b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57d2ab37-558d-d278-1a33-4af64dfc36ff" executionId="e444d5e9-4bee-45c9-990e-d2bacd4698e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee381e4e-2362-05c9-680a-cf6ecb7c338e" executionId="2dc9d45a-ad51-412e-b276-86967e485c81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42a57deb-43d9-7b5e-b8f1-9fcad114a205" executionId="fe71c931-6873-4c22-ab09-bdad4916db75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3d92a86-077e-56c7-122a-004411c17aea" executionId="c259e89c-9c50-48ba-bdb2-1adbffeebb25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95d6eee7-a4c8-4692-367f-5f1816282834" executionId="710e5d5d-c109-4229-a03e-70e19d9aaf72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35bb6936-bfee-4384-c125-fbe278aedeb3" executionId="4313b26b-d701-4602-8c0e-538224991faa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f481d9bc-b23b-bf31-f7e9-379fa09645bc" executionId="dde99191-5aa0-4c8f-a67d-6a2615f35e8a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6db2c9a8-f1ee-353b-d4c5-0e626deb870f" executionId="0fcc5e97-1179-4628-906c-3b4de22ce02c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05a51527-72ab-2ed2-de4e-5e8c97c58fd9" executionId="6979eb30-3385-4a76-8483-adcc6f2eb238" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f79651b-1003-3332-ec58-97623574da27" executionId="c90f2b38-70b1-46f8-afa7-a9fd74ae9024" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5257da0e-7b55-dc4c-90b5-a856d0c7d1f5" executionId="834c0b01-9739-41ee-b026-7ab210546e06" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbd96e57-4f2d-310b-eaa3-644bd700b507" executionId="5247d6e8-b94f-4ece-9dbd-382b6be3d791" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19b3b304-9a81-a519-04c2-9308b1f8cb72" executionId="3a6290f9-a974-484f-98cd-cee9dc22eeaa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b723d50-1d0e-1840-8c28-92daecd86d7a" executionId="e6dfd4bc-3d82-4dbe-a22a-af0c27d84517" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="49" executed="49" passed="49" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.9)&#xD;
+[xUnit.net 00:00:00.21]   Discovering: PawVetAgenda.Tests&#xD;
+[xUnit.net 00:00:00.26]   Discovered:  PawVetAgenda.Tests&#xD;
+[xUnit.net 00:00:00.29]   Starting:    PawVetAgenda.Tests&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 6 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 6 entities to in-memory store.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\maxim\OneDrive\Desktop\PawVet-Trabajo3\PawVet-Trabajo3\api-agenda&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 481 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 481 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/1/estado&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/1/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/1/estado respondio 200 en 48 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/1/estado respondio 200 en 48 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 8 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/2/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/2/estado respondio 200 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/citas/2&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/citas/2 respondio 409 en 44 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 401 en 10 ms (usuario: anonimo)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 403 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/citas/999999&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/citas/999999 respondio 404 en 9 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/3/estado&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/3/estado respondio 400 en 3 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/4/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/4/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/4/estado&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/4/estado respondio 409 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 2 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/citas/5&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/citas/5 respondio 204 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 201 en 131 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/citas/1&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 3 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/citas/mi-agenda&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/citas/1 respondio 200 en 8 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/citas/mi-agenda respondio 200 en 20 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/citas/8&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/citas/8 respondio 403 en 0 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 503 en 18 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/citas/mi-agenda&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/citas/mi-agenda respondio 403 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 409 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 3 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/12/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/12/estado respondio 200 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/14/estado&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/14/estado respondio 409 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 503 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 409 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; DELETE /api/v1/citas/16&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- DELETE /api/v1/citas/16 respondio 204 en 16 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 201 en 89 ms (usuario: Usuario de Prueba)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/3/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/3/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 403 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/vacunaciones/999999&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/vacunaciones/999999 respondio 404 en 13 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/4/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/4/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 403 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/vacunaciones/por-vencer&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/vacunaciones/por-vencer respondio 200 en 26 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/5/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/5/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 400 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/vacunaciones/3&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/vacunaciones/3 respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/vacunaciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/vacunaciones respondio 400 en 7 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/vacunaciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/vacunaciones respondio 400 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/6/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/6/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 2 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 201 en 2 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; GET /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- GET /api/v1/atenciones respondio 200 en 18 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PUT /api/v1/vacunaciones/1&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PUT /api/v1/vacunaciones/1 respondio 403 en 0 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/citas&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/citas respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; PATCH /api/v1/citas/7/estado&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 1 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- PATCH /api/v1/citas/7/estado respondio 200 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: Microsoft.EntityFrameworkCore.Update[30100]&#xD;
+      Saved 2 entities to in-memory store.&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 201 en 1 ms (usuario: Usuario de Prueba)&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      --&gt; POST /api/v1/atenciones&#xD;
+info: PawVetAgenda.Middleware.LoggingMiddleware[0]&#xD;
+      &lt;-- POST /api/v1/atenciones respondio 409 en 3 ms (usuario: Usuario de Prueba)&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:02.39]   Finished:    PawVetAgenda.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
