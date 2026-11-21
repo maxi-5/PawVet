@@ -1,0 +1,58 @@
+### PawVet - API Clinica e Identidad (Visual Studio: boton "Send request")
+@url = http://localhost:5001/api/v1
+# 1) ejecuta el login y copia el token aqui:
+@token = PEGA_AQUI_EL_TOKEN
+
+### Login (devuelve el JWT)
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{ "email": "admin@pawvet.cl", "password": "Admin123!" }
+
+### Roles
+GET {{url}}/roles
+Authorization: Bearer {{token}}
+
+### Usuarios (paginado)
+GET {{url}}/usuarios?pagina=1&tamano=10
+Authorization: Bearer {{token}}
+
+### Crear usuario Veterinario
+POST {{url}}/usuarios
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "nombre": "Camila Soto", "email": "camila@pawvet.cl", "password": "Secreta123", "idRol": 3 }
+
+### Crear ficha de veterinario vinculada al usuario
+POST {{url}}/veterinarios
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "rut": "15678234-3", "nombre": "Camila Soto", "especialidad": "Medicina general", "telefono": "+56987654321", "idUser": 2 }
+
+### Tutores
+GET {{url}}/tutores?q=Gonz&pagina=1&tamano=10
+Authorization: Bearer {{token}}
+
+### Crear tutor
+POST {{url}}/tutores
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "rut": "12345678-5", "nombre": "María González", "telefono": "+56912345678", "email": "maria@correo.cl", "direccion": "Villagrán 455, Mulchén" }
+
+### Crear mascota
+POST {{url}}/mascotas
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "nombre": "Rocky", "sexo": "Macho", "fechaNacimiento": "2022-03-15", "peso": 25.4, "idTutor": 1, "idEspecie": 1, "idRaza": 1 }
+
+### Mascotas
+GET {{url}}/mascotas?pagina=1&tamano=10
+Authorization: Bearer {{token}}
+
+### Razas de una especie
+GET {{url}}/razas?idEspecie=1
+Authorization: Bearer {{token}}
