@@ -1,0 +1,15 @@
+# secretos
+.env
+*.env.local
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+# React
+node_modules/
+dist/
+# sistema
+.DS_Store
+Thumbs.db

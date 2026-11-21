@@ -1,0 +1,1026 @@
+# Contrato OpenAPI (diseno primero) - Hito 2, actualizado segun docs/openapi/CHANGELOG.md
+openapi: 3.0.3
+info:
+  title: PawVet - API Agenda y Atencion
+  version: 1.1.0
+  description: Citas, atenciones y vacunaciones. Base de datos PawVetAgendaDB. Valida el JWT emitido por la API Clinica (misma
+    llave, Issuer PawVet.ApiClinica, Audience PawVet). Consume la API Clinica (timeout 5 s, 503) y la API publica de feriados
+    Nager.Date (timeout 3 s, cache 24 h).
+servers:
+- url: http://localhost:5002/api/v1
+  description: Local (dotnet run o docker compose)
+tags:
+- name: Citas
+- name: Atenciones
+- name: Vacunas
+security:
+- bearerAuth: []
+paths:
+  /citas:
+    get:
+      tags:
+      - Citas
+      summary: Lista citas con filtros (paginado)
+      operationId: listarCitas
+      x-roles:
+      - Administrador
+      - Recepcionista
+      parameters:
+      - name: pagina
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+          minimum: 1
+      - name: tamano
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 20
+          minimum: 1
+          maximum: 100
+      - name: fecha
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date
+      - name: idVeterinario
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: idMascota
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: estado
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - Agendada
+          - Confirmada
+          - Atendida
+          - Cancelada
+          - NoAsistio
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/Pagina'
+                - type: object
+                  properties:
+                    items:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Cita'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    post:
+      tags:
+      - Citas
+      summary: Agenda una cita (Secuencia 2)
+      operationId: crearCita
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CitaGuardar'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cita'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '503':
+          description: La API Clinica no respondio en 5 segundos o fallo
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /citas/mi-agenda:
+    get:
+      tags:
+      - Citas
+      summary: Citas del dia del veterinario logueado (claim id_veterinario), ordenadas por hora
+      operationId: miAgenda
+      x-roles:
+      - Veterinario
+      parameters:
+      - name: fecha
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date
+        description: Por defecto, hoy
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cita'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /citas/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Citas
+      summary: Obtiene una cita
+      operationId: obtenerCita
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cita'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    put:
+      tags:
+      - Citas
+      summary: Edita o reprograma una cita Agendada o Confirmada
+      operationId: editarCita
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CitaGuardar'
+      responses:
+        '204':
+          description: Sin contenido
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '503':
+          description: La API Clinica no respondio en 5 segundos o fallo
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Citas
+      summary: Elimina una cita (409 si ya fue atendida)
+      operationId: eliminarCita
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /citas/{id}/estado:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    patch:
+      tags:
+      - Citas
+      summary: Cambia el estado segun el diagrama de estados (409 si la transicion no es valida)
+      operationId: cambiarEstadoCita
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CambioEstadoCita'
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cita'
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /atenciones:
+    get:
+      tags:
+      - Atenciones
+      summary: Lista atenciones (historial), filtra por mascota o cita
+      operationId: listarAtenciones
+      x-roles:
+      - Administrador
+      - Veterinario
+      parameters:
+      - name: idMascota
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: idCita
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Atencion'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    post:
+      tags:
+      - Atenciones
+      summary: Registra la atencion de una cita Confirmada del veterinario logueado; la cita pasa a Atendida
+      operationId: registrarAtencion
+      x-roles:
+      - Veterinario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AtencionCrear'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atencion'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /atenciones/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Atenciones
+      summary: Obtiene una atencion
+      operationId: obtenerAtencion
+      x-roles:
+      - Administrador
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atencion'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /vacunas:
+    get:
+      tags:
+      - Vacunas
+      summary: Catalogo de vacunas
+      operationId: listarVacunas
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: idEspecie
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vacuna'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+  /vacunaciones:
+    get:
+      tags:
+      - Vacunas
+      summary: Vacunaciones de una mascota
+      operationId: listarVacunaciones
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: idMascota
+        in: query
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vacunacion'
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Vacunas
+      summary: Registra una vacunacion y calcula la proxima dosis
+      operationId: registrarVacunacion
+      x-roles:
+      - Veterinario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VacunacionCrear'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vacunacion'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '503':
+          description: La API Clinica no respondio en 5 segundos o fallo
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /vacunaciones/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    put:
+      tags:
+      - Vacunas
+      summary: Corrige la fecha de aplicacion o el lote y recalcula la proxima dosis
+      operationId: editarVacunacion
+      x-roles:
+      - Veterinario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VacunacionEditar'
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vacunacion'
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /vacunaciones/por-vencer:
+    get:
+      tags:
+      - Vacunas
+      summary: Vacunas cuya proxima dosis vence en los proximos dias (Vacunacion.estaPorVencer)
+      operationId: vacunasPorVencer
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: dias
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 30
+          minimum: 1
+          maximum: 365
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vacunacion'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT HS256 de 60 minutos emitido por POST /auth/login de la API Clinica
+  schemas:
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+        instance:
+          type: string
+        traceId:
+          type: string
+      description: RFC 9457
+    ValidationProblemDetails:
+      allOf:
+      - $ref: '#/components/schemas/ProblemDetails'
+      - type: object
+        properties:
+          errors:
+            type: object
+            additionalProperties:
+              type: array
+              items:
+                type: string
+    Pagina:
+      type: object
+      properties:
+        pagina:
+          type: integer
+        tamano:
+          type: integer
+        total:
+          type: integer
+    Cita:
+      type: object
+      properties:
+        idCita:
+          type: integer
+        fechaHora:
+          type: string
+          format: date-time
+        duracionMinutos:
+          type: integer
+        motivo:
+          type: string
+        estado:
+          type: string
+          enum:
+          - Agendada
+          - Confirmada
+          - Atendida
+          - Cancelada
+          - NoAsistio
+        idMascota:
+          type: integer
+        idVeterinario:
+          type: integer
+        fechaCreacion:
+          type: string
+          format: date-time
+    CitaGuardar:
+      type: object
+      properties:
+        idMascota:
+          type: integer
+          description: Se verifica en la API Clinica (400 si no existe, 503 si no responde)
+        idVeterinario:
+          type: integer
+        fechaHora:
+          type: string
+          format: date-time
+          description: Futura (400); no feriado (400); sin tope con otra cita del veterinario (409)
+        duracionMinutos:
+          type: integer
+          minimum: 15
+          maximum: 120
+          default: 30
+        motivo:
+          type: string
+          minLength: 3
+          maxLength: 300
+      required:
+      - idMascota
+      - idVeterinario
+      - fechaHora
+      - motivo
+    CambioEstadoCita:
+      type: object
+      properties:
+        estado:
+          type: string
+          enum:
+          - Confirmada
+          - Cancelada
+          - NoAsistio
+          description: Atendida se alcanza solo con POST /atenciones
+      required:
+      - estado
+    Atencion:
+      type: object
+      properties:
+        idAtencion:
+          type: integer
+        idCita:
+          type: integer
+        fecha:
+          type: string
+          format: date-time
+        diagnostico:
+          type: string
+        tratamiento:
+          type: string
+          nullable: true
+        peso:
+          type: number
+          format: double
+          nullable: true
+        temperatura:
+          type: number
+          format: double
+          nullable: true
+        idMascota:
+          type: integer
+        idVeterinario:
+          type: integer
+    AtencionCrear:
+      type: object
+      properties:
+        idCita:
+          type: integer
+        diagnostico:
+          type: string
+          minLength: 3
+          maxLength: 500
+        tratamiento:
+          type: string
+          maxLength: 500
+          nullable: true
+        peso:
+          type: number
+          format: double
+          minimum: 0.01
+          maximum: 999.99
+          nullable: true
+        temperatura:
+          type: number
+          format: double
+          minimum: 30
+          maximum: 45
+          nullable: true
+      required:
+      - idCita
+      - diagnostico
+      description: idMascota e idVeterinario se copian desde la cita
+    Vacuna:
+      type: object
+      properties:
+        idVacuna:
+          type: integer
+        nombre:
+          type: string
+        idEspecie:
+          type: integer
+        intervaloDias:
+          type: integer
+    Vacunacion:
+      type: object
+      properties:
+        idVacunacion:
+          type: integer
+        fechaAplicacion:
+          type: string
+          format: date
+        fechaProxima:
+          type: string
+          format: date
+          nullable: true
+          description: Vacunacion.calcularProximaDosis(vacuna)
+        lote:
+          type: string
+          nullable: true
+        idMascota:
+          type: integer
+        idVacuna:
+          type: integer
+        vacuna:
+          type: string
+        idVeterinario:
+          type: integer
+        idAtencion:
+          type: integer
+          nullable: true
+    VacunacionEditar:
+      type: object
+      properties:
+        fechaAplicacion:
+          type: string
+          format: date
+          description: No futura (400)
+        lote:
+          type: string
+          maxLength: 50
+          nullable: true
+      required:
+      - fechaAplicacion
+    VacunacionCrear:
+      type: object
+      properties:
+        idMascota:
+          type: integer
+        idVacuna:
+          type: integer
+          description: Debe ser de la especie de la mascota (400)
+        fechaAplicacion:
+          type: string
+          format: date
+          description: No futura (400)
+        lote:
+          type: string
+          maxLength: 50
+          nullable: true
+        idAtencion:
+          type: integer
+          nullable: true
+          description: Debe existir y ser de la misma mascota (400)
+      required:
+      - idMascota
+      - idVacuna
+      - fechaAplicacion

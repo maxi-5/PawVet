@@ -1,0 +1,21 @@
+%% Despliegue con docker compose up (4 contenedores en una red interna)
+flowchart TB
+  NAV([Navegador del usuario])
+  subgraph host["Equipo anfitrión · docker compose"]
+    subgraph red["Red interna de Docker"]
+      C1["cliente-react<br/>nginx · 3000→80"]
+      C2["api-clinica<br/>.NET 10 · 5001→8080<br/>ConnectionStrings__ClinicaDB · Jwt__Key<br/>Admin__Email · Admin__Password"]
+      C3["api-agenda<br/>.NET 10 · 5002→8080<br/>ConnectionStrings__AgendaDB · Jwt__Key<br/>Servicios__ApiClinica"]
+      C4[("sqlserver<br/>SQL Server 2022 · 1433→1433<br/>MSSQL_SA_PASSWORD<br/>PawVetClinicaDB + PawVetAgendaDB")]
+    end
+    ENV[/".env (no se versiona)<br/>.env.example solo con nombres"/]
+  end
+  FER[("date.nager.at<br/>Internet")]
+  NAV -- ":3000" --> C1
+  NAV -- ":5001" --> C2
+  NAV -- ":5002" --> C3
+  C3 -- "http://api-clinica:8080" --> C2
+  C2 --> C4
+  C3 --> C4
+  C3 -- HTTPS --> FER
+  ENV -.-> C2 & C3 & C4

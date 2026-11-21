@@ -1,0 +1,11 @@
+%% C4 nivel 1: contexto del sistema
+flowchart TB
+  ADM([👤 Administrador])
+  REC([👤 Recepcionista])
+  VET([👤 Veterinario])
+  SIS[["PawVet<br/>Gestión de clínica veterinaria:<br/>tutores, mascotas, agenda y ficha clínica"]]
+  FER[("API pública de feriados de Chile<br/>Nager.Date")]
+  ADM -- "Gestiona usuarios y catálogos<br/>(navegador)" --> SIS
+  REC -- "Registra tutores y mascotas,<br/>agenda citas (navegador)" --> SIS
+  VET -- "Consulta su agenda, registra<br/>atenciones y vacunas (navegador)" --> SIS
+  SIS -- "Consulta feriados<br/>HTTPS/JSON" --> FER

@@ -1,0 +1,37 @@
+@startuml
+' Casos de uso de PawVet (Hito 1, actualizado en el Hito 2)
+left to right direction
+actor Administrador
+actor Recepcionista
+actor Veterinario
+actor "API Feriados (Nager.Date)" as Feriados
+rectangle PawVet {
+  usecase "CU-01 Iniciar sesión" as CU01
+  usecase "CU-02 Gestionar usuarios" as CU02
+  usecase "CU-03 Gestionar catálogos\n(veterinarios, especies, razas)" as CU03
+  usecase "CU-04 Gestionar tutores" as CU04
+  usecase "CU-05 Gestionar mascotas" as CU05
+  usecase "CU-06 Agendar cita" as CU06
+  usecase "CU-07 Confirmar/cancelar cita" as CU07
+  usecase "CU-08 Ver agenda" as CU08
+  usecase "CU-09 Registrar atención" as CU09
+  usecase "CU-10 Registrar vacunación" as CU10
+  usecase "Verificar mascota y veterinario" as VER
+  usecase "Verificar feriado" as FER
+}
+Administrador --> CU01
+Administrador --> CU02
+Administrador --> CU03
+Recepcionista --> CU01
+Recepcionista --> CU04
+Recepcionista --> CU05
+Recepcionista --> CU06
+Recepcionista --> CU07
+Veterinario --> CU01
+Veterinario --> CU08
+Veterinario --> CU09
+CU06 ..> VER : <<include>>
+CU06 ..> FER : <<include>>
+FER --> Feriados
+CU10 ..> CU09 : <<extend>>
+@enduml

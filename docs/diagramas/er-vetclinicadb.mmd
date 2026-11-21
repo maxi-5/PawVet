@@ -1,0 +1,56 @@
+%% ER de PawVetClinicaDB (API Clinica e Identidad). En el Hito 2: VetClinicaDB
+erDiagram
+  ROL ||--o{ USUARIO : "tiene"
+  USUARIO |o--o| VETERINARIO : "cuenta de (id_user unico)"
+  TUTOR ||--o{ MASCOTA : "responsable de"
+  ESPECIE ||--o{ RAZA : "agrupa"
+  ESPECIE ||--o{ MASCOTA : "clasifica"
+  RAZA |o--o{ MASCOTA : "clasifica"
+  ROL {
+    int id_rol PK
+    nvarchar nombre
+  }
+  USUARIO {
+    int id_user PK
+    nvarchar nombre
+    nvarchar email UK
+    nvarchar password_hash
+    int id_rol FK
+  }
+  VETERINARIO {
+    int id_veterinario PK
+    nvarchar rut UK
+    nvarchar nombre
+    nvarchar especialidad
+    nvarchar telefono
+    nvarchar email
+    int id_user FK "UK, nullable"
+  }
+  TUTOR {
+    int id_tutor PK
+    nvarchar rut UK
+    nvarchar nombre
+    nvarchar telefono
+    nvarchar email
+    nvarchar direccion
+  }
+  ESPECIE {
+    int id_especie PK
+    nvarchar nombre UK
+  }
+  RAZA {
+    int id_raza PK
+    nvarchar nombre
+    int id_especie FK
+  }
+  MASCOTA {
+    int id_mascota PK
+    nvarchar nombre
+    nvarchar sexo "CHECK Macho/Hembra"
+    date fecha_nacimiento
+    decimal peso
+    nvarchar microchip "UK filtrado"
+    int id_tutor FK
+    int id_especie FK
+    int id_raza FK "nullable"
+  }

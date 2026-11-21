@@ -1,0 +1,18 @@
+%% C4 nivel 2: contenedores
+flowchart LR
+  U([👤 Usuario<br/>navegador])
+  subgraph PawVet
+    WEB["Cliente web<br/>React + Vite"]
+    CLI["API Clínica e Identidad<br/>ASP.NET Core · :5001<br/>emite el JWT"]
+    AGE["API Agenda y Atención<br/>ASP.NET Core · :5002<br/>valida el JWT"]
+    DB1[("PawVetClinicaDB<br/>SQL Server")]
+    DB2[("PawVetAgendaDB<br/>SQL Server")]
+  end
+  FER[("API de feriados<br/>Nager.Date")]
+  U -- HTTPS --> WEB
+  WEB -- "JSON + Bearer JWT<br/>login y datos maestros" --> CLI
+  WEB -- "JSON + Bearer JWT<br/>citas, atenciones, vacunas" --> AGE
+  AGE -- "IHttpClientFactory · timeout 5 s<br/>Bearer reenviado · falla → 503" --> CLI
+  AGE -- "timeout 3 s · caché 24 h<br/>falla → continúa" --> FER
+  CLI -- "EF Core (TDS 1433)" --> DB1
+  AGE -- "EF Core (TDS 1433)" --> DB2

@@ -1,0 +1,22 @@
+sequenceDiagram
+  autonumber
+  actor U as Usuario
+  participant W as Cliente React (http.js)
+  participant A as API (Clínica o Agenda)
+  rect rgb(253, 236, 234)
+  note over U,A: Caso 1: token vencido (RNF-07)
+  U->>W: Realiza una acción
+  W->>A: Petición + Bearer (token vencido)
+  A->>A: JwtBearer: ValidateLifetime falla
+  A-->>W: 401 + WWW-Authenticate (ProblemDetails)
+  W->>W: Evento "sesion-expirada": borra token y usuario
+  W-->>U: "Tu sesión expiró. Inicia sesión nuevamente." + redirige a /login
+  end
+  rect rgb(214, 234, 248)
+  note over U,A: Caso 2: token válido sin permiso
+  U->>W: Recepcionista intenta registrar una atención
+  W->>A: POST /api/v1/atenciones + Bearer válido
+  A->>A: [Authorize(Roles = "Veterinario")] no se cumple
+  A-->>W: 403 ProblemDetails
+  W-->>U: "No tienes permiso para realizar esta acción" (la sesión se mantiene)
+  end

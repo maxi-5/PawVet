@@ -1,0 +1,43 @@
+%% ER de PawVetAgendaDB (API Agenda y Atencion). En el Hito 2: AgendaDB
+%% id_mascota e id_veterinario son referencias logicas a PawVetClinicaDB (sin FK entre bases, ADR-001)
+erDiagram
+  CITA ||--o| ATENCION : "genera (id_cita unico)"
+  ATENCION |o--o{ VACUNACION : "aplica"
+  VACUNA ||--o{ VACUNACION : "se aplica en"
+  CITA {
+    int id_cita PK
+    datetime2 fecha_hora
+    int duracion_minutos "CHECK 15-120"
+    nvarchar motivo
+    nvarchar estado "CHECK 5 estados"
+    int id_mascota "ref. logica"
+    int id_veterinario "ref. logica"
+    datetime2 fecha_creacion
+  }
+  ATENCION {
+    int id_atencion PK
+    int id_cita FK "UK"
+    datetime2 fecha
+    nvarchar diagnostico
+    nvarchar tratamiento
+    decimal peso
+    decimal temperatura
+    int id_mascota "ref. logica"
+    int id_veterinario "ref. logica"
+  }
+  VACUNA {
+    int id_vacuna PK
+    nvarchar nombre
+    int id_especie "ref. logica"
+    int intervalo_dias
+  }
+  VACUNACION {
+    int id_vacunacion PK
+    date fecha_aplicacion
+    date fecha_proxima
+    nvarchar lote
+    int id_mascota "ref. logica"
+    int id_veterinario "ref. logica"
+    int id_vacuna FK
+    int id_atencion FK "nullable"
+  }

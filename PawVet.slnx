@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="api-clinica/PawVetClinica.csproj" />
+  <Project Path="api-agenda/PawVetAgenda.csproj" />
+  <Project Path="api-clinica.Tests/PawVetClinica.Tests.csproj" />
+  <Project Path="api-agenda.Tests/PawVetAgenda.Tests.csproj" />
+</Solution>

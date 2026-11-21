@@ -1,0 +1,15 @@
+stateDiagram-v2
+  [*] --> Agendada : POST /citas (201)
+  Agendada --> Confirmada : confirmar() antes de la hora
+  Agendada --> Cancelada : cancelar() antes de la hora
+  Confirmada --> Cancelada : cancelar() antes de la hora
+  Confirmada --> Atendida : marcarAtendida() al registrar POST /atenciones
+  Agendada --> NoAsistio : marcarNoAsistio() después de la hora
+  Confirmada --> NoAsistio : marcarNoAsistio() después de la hora
+  Atendida --> [*]
+  Cancelada --> [*]
+  NoAsistio --> [*]
+  note right of Atendida
+    Estados finales: cualquier transición
+    desde ellos responde 409 Conflict
+  end note

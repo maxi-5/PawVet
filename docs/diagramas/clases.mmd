@@ -1,0 +1,99 @@
+%% Clases de dominio de PawVet, agrupadas por la API duena de cada una
+classDiagram
+  direction TB
+  namespace API_Clinica_e_Identidad {
+    class Rol {
+      +int idRol
+      +string nombre
+    }
+    class Usuario {
+      +int idUser
+      +string nombre
+      +string email
+      -string passwordHash
+      +verificarPassword(password) bool
+    }
+    class Veterinario {
+      +int idVeterinario
+      +string rut
+      +string nombre
+      +string especialidad
+      +int? idUser
+    }
+    class Tutor {
+      +int idTutor
+      +string rut
+      +string nombre
+      +string telefono
+      +string email
+      +string direccion
+    }
+    class Especie {
+      +int idEspecie
+      +string nombre
+    }
+    class Raza {
+      +int idRaza
+      +string nombre
+      +perteneceA(idEspecie) bool
+    }
+    class Mascota {
+      +int idMascota
+      +string nombre
+      +string sexo
+      +DateOnly fechaNacimiento
+      +decimal peso
+      +string microchip
+      +calcularEdad() int
+    }
+  }
+  namespace API_Agenda_y_Atencion {
+    class Cita {
+      +int idCita
+      +DateTime fechaHora
+      +int duracionMinutos
+      +string motivo
+      +EstadoCita estado
+      +int idMascota
+      +int idVeterinario
+      +confirmar()
+      +cancelar()
+      +marcarAtendida()
+      +marcarNoAsistio()
+      +seTopaCon(inicio, minutos) bool
+    }
+    class Atencion {
+      +int idAtencion
+      +DateTime fecha
+      +string diagnostico
+      +string tratamiento
+      +decimal peso
+      +decimal temperatura
+    }
+    class Vacuna {
+      +int idVacuna
+      +string nombre
+      +int idEspecie
+      +int intervaloDias
+    }
+    class Vacunacion {
+      +int idVacunacion
+      +DateOnly fechaAplicacion
+      +DateOnly fechaProxima
+      +string lote
+      +calcularProximaDosis(vacuna) DateOnly
+      +estaPorVencer(dias) bool
+    }
+  }
+  Rol "1" -- "0..*" Usuario : tiene
+  Usuario "0..1" -- "0..1" Veterinario : cuenta de
+  Tutor "1" -- "0..*" Mascota : responsable de
+  Especie "1" -- "0..*" Raza : agrupa
+  Especie "1" -- "0..*" Mascota : clasifica
+  Raza "0..1" -- "0..*" Mascota : clasifica
+  Cita "1" -- "0..1" Atencion : genera
+  Atencion "0..1" -- "0..*" Vacunacion : aplica
+  Vacuna "1" -- "0..*" Vacunacion : se aplica en
+  Cita ..> Mascota : idMascota (ref. por HTTP)
+  Cita ..> Veterinario : idVeterinario (ref. por HTTP)
+  Vacunacion ..> Mascota : idMascota (ref. por HTTP)

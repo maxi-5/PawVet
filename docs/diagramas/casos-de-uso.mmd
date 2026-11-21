@@ -1,0 +1,31 @@
+%% Casos de uso de PawVet: version Mermaid del archivo casos-de-uso.puml (para generar el PNG)
+flowchart LR
+  VET([🧑‍⚕️ Veterinario])
+  ADM([🧑‍💼 Administrador])
+  REC([🧑‍💻 Recepcionista])
+  subgraph SIS["Sistema PawVet"]
+    CU10([CU-10 Registrar vacunación])
+    CU08([CU-08 Ver agenda])
+    CU02([CU-02 Gestionar usuarios])
+    CU01([CU-01 Iniciar sesión])
+    CU03([CU-03 Gestionar catálogos])
+    CU04([CU-04 Gestionar tutores])
+    CU05([CU-05 Gestionar mascotas])
+    CU06([CU-06 Agendar cita])
+    CU07([CU-07 Confirmar/cancelar cita])
+    CU09([CU-09 Registrar atención])
+    VER([Verificar mascota y veterinario])
+    FER([Verificar feriado])
+  end
+  EXT([🌐 API Feriados])
+  VET --- CU08 & CU09 & CU01
+  ADM --- CU02 & CU01 & CU03
+  REC --- CU01 & CU04 & CU05 & CU06 & CU07
+  CU10 -. «extend» .-> CU09
+  CU06 -. «include» .-> VER
+  CU06 -. «include» .-> FER
+  FER --- EXT
+  style SIS fill:#fafafa,stroke:#888
+  classDef actor fill:#dbe8f7,stroke:#2b5a8a
+  class VET,ADM,REC actor
+  style EXT fill:#e5e5e5,stroke:#777,stroke-dasharray: 4 3

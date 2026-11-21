@@ -1,0 +1,1646 @@
+# Contrato OpenAPI (diseno primero) - Hito 2, actualizado segun docs/openapi/CHANGELOG.md
+openapi: 3.0.3
+info:
+  title: PawVet - API Clinica e Identidad
+  version: 1.1.0
+  description: Usuarios, roles y login (emite el JWT), tutores, mascotas, veterinarios, especies y razas. Base de datos PawVetClinicaDB.
+    Roles por operacion en x-roles.
+servers:
+- url: http://localhost:5001/api/v1
+  description: Local (dotnet run o docker compose)
+tags:
+- name: Autenticacion
+- name: Usuarios
+- name: Tutores
+- name: Mascotas
+- name: Veterinarios
+- name: Catalogos
+security:
+- bearerAuth: []
+paths:
+  /auth/login:
+    post:
+      tags:
+      - Autenticacion
+      summary: Inicia sesion y entrega el JWT (60 min)
+      operationId: login
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+  /usuarios:
+    get:
+      tags:
+      - Usuarios
+      summary: Lista usuarios (paginado)
+      operationId: listarUsuarios
+      x-roles:
+      - Administrador
+      parameters:
+      - name: pagina
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+          minimum: 1
+      - name: tamano
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 20
+          minimum: 1
+          maximum: 100
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/Pagina'
+                - type: object
+                  properties:
+                    items:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Usuario'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    post:
+      tags:
+      - Usuarios
+      summary: Crea un usuario con su rol (password con BCrypt)
+      operationId: crearUsuario
+      x-roles:
+      - Administrador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UsuarioCrear'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /usuarios/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Usuarios
+      summary: Obtiene un usuario
+      operationId: obtenerUsuario
+      x-roles:
+      - Administrador
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Usuarios
+      summary: Elimina un usuario (409 si es el propio usuario logueado, ver CHANGELOG 1.0.1)
+      operationId: eliminarUsuario
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /roles:
+    get:
+      tags:
+      - Usuarios
+      summary: Lista los roles
+      operationId: listarRoles
+      x-roles:
+      - Administrador
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Rol'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /tutores:
+    get:
+      tags:
+      - Tutores
+      summary: Lista tutores
+      operationId: listarTutores
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: pagina
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+          minimum: 1
+      - name: tamano
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 20
+          minimum: 1
+          maximum: 100
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Busca por nombre o RUT
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/Pagina'
+                - type: object
+                  properties:
+                    items:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Tutor'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Tutores
+      summary: Crea tutores
+      operationId: crearTutor
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TutorGuardar'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tutor'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /tutores/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Tutores
+      summary: Obtiene un registro de tutores
+      operationId: obtenerTutor
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tutor'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    put:
+      tags:
+      - Tutores
+      summary: Edita tutores
+      operationId: editarTutor
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TutorGuardar'
+      responses:
+        '204':
+          description: Sin contenido
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Tutores
+      summary: Elimina tutores
+      operationId: eliminarTutor
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /mascotas:
+    get:
+      tags:
+      - Mascotas
+      summary: Lista mascotas
+      operationId: listarMascotas
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: pagina
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 1
+          minimum: 1
+      - name: tamano
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 20
+          minimum: 1
+          maximum: 100
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Busca por nombre o microchip
+      - name: idTutor
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/Pagina'
+                - type: object
+                  properties:
+                    items:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Mascota'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Mascotas
+      summary: Crea mascotas
+      operationId: crearMascota
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MascotaGuardar'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mascota'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /mascotas/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Mascotas
+      summary: Obtiene un registro de mascotas
+      operationId: obtenerMascota
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mascota'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    put:
+      tags:
+      - Mascotas
+      summary: Edita mascotas
+      operationId: editarMascota
+      x-roles:
+      - Administrador
+      - Recepcionista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MascotaGuardar'
+      responses:
+        '204':
+          description: Sin contenido
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Mascotas
+      summary: Elimina mascotas
+      operationId: eliminarMascota
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /veterinarios:
+    get:
+      tags:
+      - Veterinarios
+      summary: Lista veterinarios
+      operationId: listarVeterinarios
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Veterinario'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Veterinarios
+      summary: Crea veterinarios
+      operationId: crearVeterinario
+      x-roles:
+      - Administrador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VeterinarioGuardar'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Veterinario'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /veterinarios/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Veterinarios
+      summary: Obtiene un registro de veterinarios
+      operationId: obtenerVeterinario
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Veterinario'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    put:
+      tags:
+      - Veterinarios
+      summary: Edita veterinarios
+      operationId: editarVeterinario
+      x-roles:
+      - Administrador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VeterinarioGuardar'
+      responses:
+        '204':
+          description: Sin contenido
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Veterinarios
+      summary: Elimina veterinarios
+      operationId: eliminarVeterinario
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /especies:
+    get:
+      tags:
+      - Catalogos
+      summary: Lista especies
+      operationId: listarEspecies
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Especie'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Catalogos
+      summary: Crea especies
+      operationId: crearEspecie
+      x-roles:
+      - Administrador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EspecieCrear'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Especie'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /especies/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Catalogos
+      summary: Obtiene un registro de especies
+      operationId: obtenerEspecie
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Especie'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Catalogos
+      summary: Elimina especies
+      operationId: eliminarEspecie
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /razas:
+    get:
+      tags:
+      - Catalogos
+      summary: Lista razas
+      operationId: listarRazas
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      parameters:
+      - name: idEspecie
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Filtra por especie
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Raza'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+    post:
+      tags:
+      - Catalogos
+      summary: Crea razas
+      operationId: crearRaza
+      x-roles:
+      - Administrador
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RazaCrear'
+      responses:
+        '201':
+          description: Creado (encabezado Location)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Raza'
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL del recurso creado
+        '400':
+          description: Datos invalidos o regla de negocio no cumplida
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ValidationProblemDetails'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /razas/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    get:
+      tags:
+      - Catalogos
+      summary: Obtiene un registro de razas
+      operationId: obtenerRaza
+      x-roles:
+      - Administrador
+      - Recepcionista
+      - Veterinario
+      responses:
+        '200':
+          description: Correcto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Raza'
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+    delete:
+      tags:
+      - Catalogos
+      summary: Elimina razas
+      operationId: eliminarRaza
+      x-roles:
+      - Administrador
+      responses:
+        '204':
+          description: Sin contenido
+        '401':
+          description: Sin token, token invalido o vencido
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+              description: Bearer error="invalid_token" cuando el token vencio
+        '403':
+          description: Rol sin permiso
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '404':
+          description: No existe
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+        '409':
+          description: Conflicto (dato repetido, estado o dependencias)
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT HS256 de 60 minutos emitido por POST /auth/login de la API Clinica
+  schemas:
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+        instance:
+          type: string
+        traceId:
+          type: string
+      description: RFC 9457
+    ValidationProblemDetails:
+      allOf:
+      - $ref: '#/components/schemas/ProblemDetails'
+      - type: object
+        properties:
+          errors:
+            type: object
+            additionalProperties:
+              type: array
+              items:
+                type: string
+    Pagina:
+      type: object
+      properties:
+        pagina:
+          type: integer
+        tamano:
+          type: integer
+        total:
+          type: integer
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          example: admin@pawvet.cl
+        password:
+          type: string
+          example: Admin123!
+      required:
+      - email
+      - password
+    Usuario:
+      type: object
+      properties:
+        idUser:
+          type: integer
+        nombre:
+          type: string
+        email:
+          type: string
+          format: email
+        idRol:
+          type: integer
+        rol:
+          type: string
+          enum:
+          - Administrador
+          - Recepcionista
+          - Veterinario
+    LoginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+        expira:
+          type: string
+          format: date-time
+        usuario:
+          $ref: '#/components/schemas/Usuario'
+        idVeterinario:
+          type: integer
+          nullable: true
+          description: Solo si el usuario es Veterinario con ficha vinculada (claim id_veterinario)
+    UsuarioCrear:
+      type: object
+      properties:
+        nombre:
+          type: string
+          minLength: 3
+          maxLength: 150
+        email:
+          type: string
+          format: email
+          maxLength: 150
+        password:
+          type: string
+          minLength: 6
+          maxLength: 100
+        idRol:
+          type: integer
+      required:
+      - nombre
+      - email
+      - password
+      - idRol
+    Rol:
+      type: object
+      properties:
+        idRol:
+          type: integer
+        nombre:
+          type: string
+    Tutor:
+      type: object
+      properties:
+        idTutor:
+          type: integer
+        rut:
+          type: string
+        nombre:
+          type: string
+        telefono:
+          type: string
+        email:
+          type: string
+          nullable: true
+        direccion:
+          type: string
+          nullable: true
+        cantidadMascotas:
+          type: integer
+    TutorGuardar:
+      type: object
+      properties:
+        rut:
+          type: string
+          pattern: ^[0-9]{7,8}-[0-9Kk]$
+          description: RUT chileno con digito verificador valido (modulo 11)
+        nombre:
+          type: string
+          minLength: 3
+          maxLength: 150
+        telefono:
+          type: string
+          pattern: ^\+56[0-9]{9}$
+          example: '+56912345678'
+        email:
+          type: string
+          format: email
+          nullable: true
+        direccion:
+          type: string
+          maxLength: 200
+          nullable: true
+      required:
+      - rut
+      - nombre
+      - telefono
+    Mascota:
+      type: object
+      properties:
+        idMascota:
+          type: integer
+        nombre:
+          type: string
+        sexo:
+          type: string
+          enum:
+          - Macho
+          - Hembra
+        fechaNacimiento:
+          type: string
+          format: date
+          nullable: true
+        edad:
+          type: integer
+          nullable: true
+          description: Mascota.calcularEdad()
+        peso:
+          type: number
+          format: double
+          nullable: true
+        microchip:
+          type: string
+          nullable: true
+        idTutor:
+          type: integer
+        nombreTutor:
+          type: string
+        idEspecie:
+          type: integer
+        especie:
+          type: string
+        idRaza:
+          type: integer
+          nullable: true
+        raza:
+          type: string
+          nullable: true
+    MascotaGuardar:
+      type: object
+      properties:
+        nombre:
+          type: string
+          minLength: 2
+          maxLength: 60
+        sexo:
+          type: string
+          enum:
+          - Macho
+          - Hembra
+        fechaNacimiento:
+          type: string
+          format: date
+          nullable: true
+          description: No puede ser futura (400)
+        peso:
+          type: number
+          format: double
+          minimum: 0.01
+          maximum: 999.99
+          nullable: true
+        microchip:
+          type: string
+          pattern: ^[0-9]{15}$
+          nullable: true
+          description: Opcional; unico (409)
+        idTutor:
+          type: integer
+        idEspecie:
+          type: integer
+        idRaza:
+          type: integer
+          nullable: true
+          description: Debe pertenecer a la especie (400)
+      required:
+      - nombre
+      - sexo
+      - idTutor
+      - idEspecie
+    Veterinario:
+      type: object
+      properties:
+        idVeterinario:
+          type: integer
+        rut:
+          type: string
+        nombre:
+          type: string
+        especialidad:
+          type: string
+          nullable: true
+        telefono:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        idUser:
+          type: integer
+          nullable: true
+    VeterinarioGuardar:
+      type: object
+      properties:
+        rut:
+          type: string
+          pattern: ^[0-9]{7,8}-[0-9Kk]$
+          description: RUT chileno con digito verificador valido (modulo 11)
+        nombre:
+          type: string
+          minLength: 3
+          maxLength: 150
+        especialidad:
+          type: string
+          maxLength: 100
+          nullable: true
+        telefono:
+          type: string
+          pattern: ^\+56[0-9]{9}$
+          example: '+56912345678'
+          nullable: true
+        email:
+          type: string
+          format: email
+          nullable: true
+        idUser:
+          type: integer
+          nullable: true
+          description: Usuario con rol Veterinario (400); no vinculado a otra ficha (409)
+      required:
+      - rut
+      - nombre
+    Especie:
+      type: object
+      properties:
+        idEspecie:
+          type: integer
+        nombre:
+          type: string
+    EspecieCrear:
+      type: object
+      properties:
+        nombre:
+          type: string
+          minLength: 2
+          maxLength: 50
+      required:
+      - nombre
+    Raza:
+      type: object
+      properties:
+        idRaza:
+          type: integer
+        nombre:
+          type: string
+        idEspecie:
+          type: integer
+        especie:
+          type: string
+    RazaCrear:
+      type: object
+      properties:
+        nombre:
+          type: string
+          minLength: 2
+          maxLength: 80
+        idEspecie:
+          type: integer
+      required:
+      - nombre
+      - idEspecie

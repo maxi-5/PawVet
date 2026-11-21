@@ -1,0 +1,23 @@
+sequenceDiagram
+  autonumber
+  actor U as Usuario
+  participant W as Cliente React
+  participant C as API Clínica
+  participant DB as PawVetClinicaDB
+  U->>W: Ingresa email y contraseña
+  W->>C: POST /api/v1/auth/login {email, password}
+  alt Datos con formato inválido
+    C-->>W: 400 ProblemDetails (errors por campo)
+  else Formato correcto
+    C->>DB: Buscar usuario por email (con Rol y Veterinario)
+    DB-->>C: Usuario o nada
+    alt No existe o Usuario.verificarPassword() = false
+      C-->>W: 401 "Credenciales incorrectas"
+      W-->>U: Muestra el mensaje y no ingresa
+    else Credenciales correctas
+      C->>C: Firmar JWT HS256 60 min (sub, id_user, nombre, rol, id_veterinario)
+      C-->>W: 200 {token, expira, usuario, idVeterinario}
+      W->>W: Guarda la sesión en localStorage
+      W-->>U: Muestra el menú de su rol
+    end
+  end

@@ -1,0 +1,39 @@
+sequenceDiagram
+  autonumber
+  actor R as Recepcionista
+  participant W as Cliente React
+  participant A as API Agenda
+  participant C as API Clínica
+  participant F as API Feriados
+  participant DB as PawVetAgendaDB
+  R->>W: Completa el formulario de cita
+  W->>A: POST /api/v1/citas + Bearer JWT
+  A->>A: Valida token (401), rol (403) y datos (400)
+  par Verificación en paralelo (timeout 5 s)
+    A->>C: GET /mascotas/{id} (Bearer reenviado)
+    C-->>A: 200 o 404
+  and
+    A->>C: GET /veterinarios/{id}
+    C-->>A: 200 o 404
+  end
+  alt API Clínica no responde o falla
+    A-->>W: 503 "La API Clinica no respondio"
+  else Mascota o veterinario no existe
+    A-->>W: 400 ProblemDetails
+  else Ambos existen
+    A->>F: GET /api/v3/PublicHolidays/{año}/CL (caché 24 h, timeout 3 s)
+    F-->>A: Lista de feriados (si falla, se continúa y se registra en el log)
+    alt La fecha es feriado
+      A-->>W: 400 "es feriado (nombre)"
+    else Día hábil
+      A->>DB: Citas cercanas del veterinario
+      DB-->>A: Lista de citas
+      alt Alguna Cita.seTopaCon(inicio, minutos)
+        A-->>W: 409 "Tope de horario"
+      else Horario libre
+        A->>DB: INSERT CITA (estado Agendada)
+        A-->>W: 201 Created + Location
+      end
+    end
+  end
+  W-->>R: Muestra el resultado o el mensaje de error
